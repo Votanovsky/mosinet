@@ -1,0 +1,94 @@
+.rate_wrapper {
+    display: flex;
+    padding: 120px 30px 80px;
+    background: $color-purple;
+    min-height: 100vh;
+    display: flex;
+
+    .col_1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 160px;
+        background: $color-pink;
+        margin-right: 30px;
+        flex-direction: column;
+        border-radius: 20px;
+        .name {
+            font-size: 36px;
+            font-family: 'Furore';
+            margin-bottom: 10px;
+        }
+        .rt {
+            font-size: 22px;
+            font-family: 'Rubik-Regular';
+        }
+    }
+    .col_2 {
+        border-radius: 20px;
+        padding: 20px 30px;
+        width: 80%;
+        height: auto;
+        background: $color-pink;
+        .tit {
+            font-size: 36px;
+            font-family: 'Furore';
+            margin-bottom: 30px;
+        }
+
+        .rates {
+            display: flex;
+            align-items: flex-start;
+            .rate {
+                width: 33.333%;
+                height: auto;
+                background: $color-white;
+                color: $color-purple;
+                padding: 20px;
+                margin-right: 20px;
+                border-radius: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                .name {
+                    font-family: 'Rubik-SemiBold';
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                }
+                .option_it {
+                    margin-bottom: 30px;
+                    .option_name {
+                        font-family: 'Rubik-Medium';
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                        @media  (max-width: $breakpoint-lg-min) {
+                            font-size: 16px;
+                        }
+                    }
+                    .option {
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Rubik-Regular';
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                        @media  (max-width: $breakpoint-lg-min) {
+                            font-size: 16px;
+                        }
+                        svg {
+                            width: 26px;
+                            margin-right: 10px;
+                            path {
+                                fill: $color-purple;
+                            }
+                            @media  (max-width: $breakpoint-lg-min) {
+                                margin-right: 7px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
