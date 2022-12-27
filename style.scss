@@ -63,7 +63,7 @@ $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
 @import 'rate.scss';
 
 body {
-    font-family: 'Rubik-Regular';
+    font-family: 'Rubik-Regular', sans-serif;
     height: 100vh;
     width: 100vw;
     color: $color-white;

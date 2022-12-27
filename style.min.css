@@ -33,11 +33,15 @@ li {
   src: url(/fonts/Furore.ttf);
 }
 .rate_wrapper {
-  display: flex;
   padding: 120px 30px 80px;
   background: #9353E3;
-  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+.rate_wrapper .cols_wr {
+  display: flex;
+  width: 100%;
+  margin-bottom: 120px;
 }
 .rate_wrapper .col_1 {
   display: flex;
@@ -46,7 +50,7 @@ li {
   width: 20%;
   height: 160px;
   background: #AD6FFB;
-  margin-right: 30px;
+  margin-right: 15px;
   flex-direction: column;
   border-radius: 20px;
 }
@@ -60,22 +64,29 @@ li {
   font-family: "Rubik-Regular";
 }
 .rate_wrapper .col_2 {
-  border-radius: 20px;
-  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
   width: 80%;
+}
+.rate_wrapper .col_2 .info {
+  border-radius: 20px;
+  padding: 30px 30px 60px 30px;
   height: auto;
   background: #AD6FFB;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
-.rate_wrapper .col_2 .tit {
+.rate_wrapper .col_2 .info .tit {
   font-size: 36px;
   font-family: "Furore";
   margin-bottom: 30px;
 }
-.rate_wrapper .col_2 .rates {
+.rate_wrapper .col_2 .info .rates {
   display: flex;
   align-items: flex-start;
 }
-.rate_wrapper .col_2 .rates .rate {
+.rate_wrapper .col_2 .info .rates .rate {
   width: 33.333%;
   height: auto;
   background: #fff;
@@ -84,28 +95,32 @@ li {
   margin-right: 20px;
   border-radius: 20px;
 }
-.rate_wrapper .col_2 .rates .rate:last-child {
+.rate_wrapper .col_2 .info .rates .rate:last-child {
   margin-right: 0;
 }
-.rate_wrapper .col_2 .rates .rate .name {
+.rate_wrapper .col_2 .info .rates .rate .name {
   font-family: "Rubik-SemiBold";
   font-size: 20px;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
-.rate_wrapper .col_2 .rates .rate .option_it {
+.rate_wrapper .col_2 .info .rates .rate .option_it {
   margin-bottom: 30px;
 }
-.rate_wrapper .col_2 .rates .rate .option_it .option_name {
+.rate_wrapper .col_2 .info .rates .rate .option_it:last-child {
+  margin-bottom: 0;
+}
+.rate_wrapper .col_2 .info .rates .rate .option_it .option_name {
   font-family: "Rubik-Medium";
   font-size: 18px;
   margin-bottom: 20px;
 }
 @media (max-width: 992px) {
-  .rate_wrapper .col_2 .rates .rate .option_it .option_name {
+  .rate_wrapper .col_2 .info .rates .rate .option_it .option_name {
     font-size: 16px;
   }
 }
-.rate_wrapper .col_2 .rates .rate .option_it .option {
+.rate_wrapper .col_2 .info .rates .rate .option_it .option {
   display: flex;
   align-items: center;
   font-family: "Rubik-Regular";
@@ -113,25 +128,31 @@ li {
   margin-bottom: 15px;
 }
 @media (max-width: 992px) {
-  .rate_wrapper .col_2 .rates .rate .option_it .option {
+  .rate_wrapper .col_2 .info .rates .rate .option_it .option {
     font-size: 16px;
   }
 }
-.rate_wrapper .col_2 .rates .rate .option_it .option svg {
+.rate_wrapper .col_2 .info .rates .rate .option_it .option svg {
   width: 26px;
   margin-right: 10px;
 }
-.rate_wrapper .col_2 .rates .rate .option_it .option svg path {
+.rate_wrapper .col_2 .info .rates .rate .option_it .option svg path {
   fill: #9353E3;
 }
 @media (max-width: 992px) {
-  .rate_wrapper .col_2 .rates .rate .option_it .option svg {
+  .rate_wrapper .col_2 .info .rates .rate .option_it .option svg {
     margin-right: 7px;
   }
 }
+.rate_wrapper .col_2 .info .rates .rate .option_it .price {
+  margin-top: 30px;
+  font-family: "Rubik-SemiBold";
+  font-size: 20px;
+  text-transform: uppercase;
+}
 
 body {
-  font-family: "Rubik-Regular";
+  font-family: "Rubik-Regular", sans-serif;
   height: 100vh;
   width: 100vw;
   color: #fff;
