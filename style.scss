@@ -164,6 +164,9 @@ body {
         // overflow: hidden;
         color: $color-pink;
         position: relative;
+        @media  (max-width: $breakpoint-sm-min) {
+            width: 360px;
+        }
         .form {
             // padding: 30px 30px 0;
             display: flex;
@@ -210,6 +213,12 @@ body {
             cursor: pointer;
             transition: .3s;
             // background: #000;
+            @media  (max-width: $breakpoint-sm-min) {
+                right: -20px;
+                top: -20px;
+                width: 20px;
+                height: 20px;
+            }
             .close_i {
                 width: 100%;
                 height: 2px;
@@ -479,11 +488,17 @@ body {
     justify-content: space-between;
     background: $color-purple;
     // height: 70px;
-    height: 50px;
+    // height: 50px;
+    @media  (max-width: $breakpoint-sm-min) {
+        padding: 15px 15px;
+    }
     .logo {
         font-family: 'Furore';
         font-size: 32px;
         color: $color-white;
+        @media  (max-width: $breakpoint-sm-min) {
+            font-size: 28px;
+        }
         span {
             color: $color-red;
         }
@@ -578,6 +593,10 @@ body {
             padding: 140px 30px 120px;
             height: auto;
             width: auto;
+            
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 100px 15px 80px;
         }
         .l {
             width: 58%;
@@ -601,10 +620,13 @@ body {
                 @media  (max-width: $breakpoint-lg-min) {
                     font-size: 46px;
                 }
+                
+                
                 span {
                     background: $color-red;
                     padding: 1px 14px 7px;
                     border-radius: 8px;
+                    line-height: 100%;
                 }
             }
             .descr {
@@ -613,9 +635,16 @@ body {
                 color: $color-white;
                 letter-spacing: -0.01rem;
                 margin-bottom: 47px;
+                
                 @media  (max-width: $breakpoint-xl-min) {
                     font-size: 22px;
                     width: 70%;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: 100%;
+                    line-height: 101%;
+                    font-size: 18px;
+                    margin-bottom: 80px;
                 }
             }
             .btn {
@@ -629,6 +658,9 @@ body {
                 border-radius: 30px;
                 position: relative;
                 z-index: 1;
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: 100%;
+                }
                 &::before {
                     content: '';
                     inset: 0;
@@ -701,6 +733,9 @@ body {
         @media  (max-width: $breakpoint-lg-min) {
             padding: 0 30px 30px;
         }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 0 15px 30px;
+        }
         .services_wr {
             width: 100%;
             height: 70vh;
@@ -715,6 +750,9 @@ body {
                 flex-direction: column;
                 height: auto;
             }
+            @media  (max-width: $breakpoint-sm-min) {
+                height: 88vh;
+            }
             .l {
                 height: 100%;
                 width: 60%;
@@ -723,6 +761,7 @@ body {
                     width: 100%;
                     z-index: 9;
                 }
+                
                 img {
                     width: 100%;
                     height: 100%;;
@@ -740,11 +779,13 @@ body {
                 display: flex;
                 flex-direction: column;
                 position: relative;
+                overflow: hidden;
                 @media  (max-width: $breakpoint-md-min) {
                     height: 240px;
                     width: 100%;
                     padding: 20px 20px 20px 20px;
                 }
+                
                 .r_wr {
                     width: 100%;
                     .service_name {
@@ -756,6 +797,11 @@ body {
                             font-size: 36px;
                             margin-bottom: 30px;
                         }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+                        
                     }
                     .service_descr {
                         font-family: "Rubik-Regular";
@@ -815,8 +861,13 @@ body {
                         width: 85%;
                         padding: 0 25px 10px;
                     }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        width: 78%;
+                        padding: 0 25px 10px;
+                    }
                     .count {
                         clip-path: none !important;
+                        
                     }
                     .dots {
                         height: 6px;
@@ -863,6 +914,9 @@ body {
         @media  (max-width: $breakpoint-lg-min) {
             padding: 170px 30px;
         }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 130px 15px;
+        }
         .horizontal_line {
             height: 2px;
             width: 100%;
@@ -873,6 +927,9 @@ body {
             display: flex;
             justify-content: space-around;
             // border-bottom: 1px solid $color-white;
+            @media  (max-width: $breakpoint-md-min) {
+                justify-content: space-between;
+            }
             .num_it {
                 display: flex;
                 flex-direction: column;
@@ -900,13 +957,10 @@ body {
                     }
                 }
                 .line_numbers {
-                    height: 120px;
                     width: 2px;
                     background: $color-white;
                     height: 0;
-                    @media  (max-width: $breakpoint-md-min) {
-                        height: 80px;
-                    }
+                    
                 }
 
             }
@@ -929,6 +983,10 @@ body {
             @media  (max-width: $breakpoint-md-min) {
                 font-size: 46px;
             }
+            @media  (max-width: $breakpoint-sm-min) {
+                padding: 0 15px;
+                font-size: 42px;
+            }
         }
         .rate_wr {
             display: flex;
@@ -937,7 +995,9 @@ body {
             overflow-x: scroll;
             
             padding:0 30px;
-
+            @media  (max-width: $breakpoint-sm-min) {
+                padding: 0 15px;
+            }
             &::-webkit-scrollbar {
                 display: none;
                 width: 10px;
@@ -967,6 +1027,9 @@ body {
                     width: 340px;
                     margin-right: 15px;
                 }
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: 290px;
+                }
                 svg {
                     path {
                         fill: $color-red;
@@ -991,11 +1054,19 @@ body {
                     @media  (max-width: $breakpoint-lg-min) {
                         font-size: 36px;
                     }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
                 }
                 .name {
                     font-family: 'Rubik-SemiBold';
                     font-size: 18px;
                     margin-bottom: 40px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                    }
                 }
                 .option_it {
                     margin-bottom: 30px;
@@ -1005,6 +1076,10 @@ body {
                         margin-bottom: 20px;
                         @media  (max-width: $breakpoint-lg-min) {
                             font-size: 22px;
+                        }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            font-size: 16px;
+                            margin-bottom: 10px;
                         }
                     }
                     .option {
@@ -1016,8 +1091,14 @@ body {
                         @media  (max-width: $breakpoint-lg-min) {
                             font-size: 22px;
                         }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            font-size: 16px;
+                        }
                         svg {
                             margin-right: 20px;
+                            @media  (max-width: $breakpoint-sm-min) {
+                                width: 26px;
+                            }
                             @media  (max-width: $breakpoint-lg-min) {
                                 margin-right: 15px;
                             }
@@ -1037,6 +1118,9 @@ body {
         overflow: hidden;
         @media  (max-width: $breakpoint-lg-min) {
             padding: 160px 30px 80px; 
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 120px 15px 60px;
         }
         .title {
             font-family: 'Furore';
@@ -1086,6 +1170,11 @@ body {
                         font-size: 20px;
                         height: 60px;
                     }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 14px;
+                        width: 100%;
+                        height: 50px;
+                    }
                     &:last-child {
                         margin-bottom: 0;
                         margin-right: 0;
@@ -1111,6 +1200,9 @@ body {
                     width: auto;
                     padding-bottom: 240px;
                     height: auto;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    padding: 20px 30px 230px;
                 }
                 .circle {
                     border: 10px solid $color-purple;
@@ -1149,8 +1241,13 @@ body {
                         justify-content: space-between;
                         padding: 0 30px;
                     }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        height: 80px;
+                        padding: 0 15px;
+                    }
                     div {
-                        font-family: 'Furore';
+                        font-family: 'Rubik-SemiBold';
+                        letter-spacing: -0.04rem;
                         font-size: 36px;
                         line-height: 101%;
                         @media  (max-width: $breakpoint-xl-min) {
@@ -1158,6 +1255,9 @@ body {
                         }
                         @media  (max-width: $breakpoint-lg-min) {
                             margin-bottom: 10px;
+                        }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            font-size: 18px;
                         }
                     }
                     p {
@@ -1172,6 +1272,9 @@ body {
                         @media  (max-width: $breakpoint-xl-min) {
                             font-size: 22px;
                         }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            font-size: 14px;
+                        }
                     }
                 }
                 .name {
@@ -1184,6 +1287,9 @@ body {
                     @media  (max-width: $breakpoint-lg-min) {
                         font-size: 28px;
                     }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 24px;
+                    }
                 }
                 .descr {
                     font-family: 'Rubik-Regular';
@@ -1195,15 +1301,24 @@ body {
                             font-weight: bold;
                             margin-bottom: 14px;
                             font-size: 24px;
+                            @media  (max-width: $breakpoint-sm-min) {
+                                font-size: 18px;
+                            }
                         }
                         p {
                             margin-bottom: 10px;
                             font-size: 18px;
                             display: flex;
                             align-items: center;
+                            @media  (max-width: $breakpoint-sm-min) {
+                                font-size: 16px;
+                            }
                             svg {
                                 margin-right: 10px;
                                 width: 30px;
+                                @media  (max-width: $breakpoint-sm-min) {
+                                    width: 26px;
+                                }
                                 path {
                                     fill: $color-white;
                                 }
@@ -1238,6 +1353,12 @@ body {
                 font-size: 64px;
                 line-height: 95%;
             }
+            @media  (max-width: $breakpoint-sm-min) {
+                font-size: 46px;
+                line-height: 105%;
+                margin-bottom: 15px;
+            }
+            
             .it {
                 display: inline-block;
                 margin-right: 20px;
@@ -1250,6 +1371,9 @@ body {
                 border-radius: 20px;
                 @media  (max-width: $breakpoint-lg-min) {
                     padding-top: 0;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    margin-right: 15px;
                 }
                 &:nth-child(even) {
                     color: $color-white;
@@ -1272,6 +1396,9 @@ body {
         border-radius: 0 0 30px 30px;
         @media  (max-width: $breakpoint-lg-min) {
             flex-direction: column;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 120px 15px 180px;
         }
         .text_wr {
             margin-right: 30px;
@@ -1296,6 +1423,11 @@ body {
                 line-height: 100%;
                 @media  (max-width: $breakpoint-xl-min) {
                     font-size: 22px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    font-size: 18px;
+                    width: 100%;
+
                 }
                 
             }
@@ -1347,6 +1479,13 @@ body {
             .form_wrapper {
                 margin-bottom: 30px;
                 display: flex;
+                @media  (max-width: $breakpoint-sm-min) {
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
                 .form_item {
                     height: 70px;
                     display: flex;
@@ -1357,6 +1496,9 @@ body {
                     }
                     @media  (max-width: $breakpoint-lg-min) {
                         width: 100%;
+                    }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        margin-bottom: 20px;
                     }
                     svg {
                         width: 25px;
@@ -1441,12 +1583,21 @@ body {
         font-size: 36px;
         font-family: 'Furore';
         margin-bottom: 60px;
+        @media  (max-width: $breakpoint-sm-min) {
+            font-size: 36px;
+        }
     }
     .contacts_wr {
         display: flex;
         font-size: 22px;
+        @media  (max-width: $breakpoint-sm-min) {
+            font-size: 14px;
+        }
         .col {
             margin-right: 140px;
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-right: auto;
+            }
             a {
                 display: block;
                 margin-bottom: 20px;

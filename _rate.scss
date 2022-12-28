@@ -3,10 +3,20 @@
     background: $color-purple;
     display: flex;
     flex-direction: column;
+    border-radius: 0 0 30px 30px;
+    @media  (max-width: $breakpoint-md-min) {
+        padding: 100px 10px 80px;
+    }
     .cols_wr {
         display: flex;
         width: 100%;
         margin-bottom: 120px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media  (max-width: $breakpoint-xl-min) {
+            flex-direction: column;
+        }
     }
     
 
@@ -15,25 +25,49 @@
         justify-content: center;
         align-items: center;
         width: 20%;
-        height: 160px;
+        height: 140px;
         background: $color-pink;
         margin-right: 15px;
         flex-direction: column;
         border-radius: 20px;
+        @media  (max-width: $breakpoint-xl-min) {
+            width: 230px;
+            height: 120px;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        @media  (max-width: $breakpoint-md-min) {
+            width: 50%;
+            height: 100px;
+            background: transparent;
+            display: block;
+            padding-left: 10px;
+            height: auto;
+            margin-bottom: 20px;
+        }
         .name {
-            font-size: 36px;
+            font-size: 28px;
             font-family: 'Furore';
             margin-bottom: 10px;
+            @media  (max-width: $breakpoint-md-min) {
+                font-size: 24px;
+            }
         }
         .rt {
             font-size: 22px;
             font-family: 'Rubik-Regular';
+            @media  (max-width: $breakpoint-md-min) {
+                font-size: 16px;
+            }
         }
     }
     .col_2  {
         display: flex;
         flex-direction: column;
         width: 80%;
+        @media  (max-width: $breakpoint-xl-min) {
+            width: 100%;
+        }
         .info{
             border-radius: 20px;
             padding: 30px 30px 60px 30px;
@@ -42,23 +76,42 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media  (max-width: $breakpoint-md-min) {
+                padding: 20px 10px 40px 10px;
+                margin-bottom: 80px;
+            }
             .tit {
-                font-size: 36px;
+                font-size: 28px;
                 font-family: 'Furore';
                 margin-bottom: 30px;
+                @media  (max-width: $breakpoint-md-min) {
+                    font-size: 24px;
+                }
+                
             }
     
             .rates {
                 display: flex;
                 align-items: flex-start;
+                @media  (max-width: $breakpoint-md-min) {
+                    flex-wrap: wrap;
+                }
                 .rate {
                     width: 33.333%;
                     height: auto;
                     background: $color-white;
                     color: $color-purple;
                     padding: 20px;
-                    margin-right: 20px;
+                    margin-right: 15px;
                     border-radius: 20px;
+                    @media  (max-width: $breakpoint-md-min) {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
@@ -67,6 +120,10 @@
                         font-size: 20px;
                         margin-bottom: 40px;
                         text-transform: uppercase;
+                        @media  (max-width: $breakpoint-md-min) {
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                        }
                     }
                     .option_it {
                         margin-bottom: 30px;
@@ -79,6 +136,7 @@
                             margin-bottom: 20px;
                             @media  (max-width: $breakpoint-lg-min) {
                                 font-size: 16px;
+                                margin-bottom: 15px;
                             }
                         }
                         .option {
@@ -89,6 +147,7 @@
                             margin-bottom: 15px;
                             @media  (max-width: $breakpoint-lg-min) {
                                 font-size: 16px;
+                                margin-bottom: 10px;
                             }
                             svg {
                                 width: 26px;
