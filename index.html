@@ -1113,31 +1113,6 @@
             // Optional parameters
             direction: 'vertical',
             loop: true,
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                // type: 'fraction',
-                type: 'bullets',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            // direction: 'ltr'
-            // slidesPerView: 1,
-        });
-
-        let swiper_text = new Swiper('.swiper-text', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
             // autoplay: {
             //     delay: 6000,
             //     disableOnInteraction: false,
@@ -1151,6 +1126,31 @@
             //     nextEl: '.swiper-button-next',
             //     prevEl: '.swiper-button-prev',
             // },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            // direction: 'ltr'
+            // slidesPerView: 1,
+        });
+
+        let swiper_text = new Swiper('.swiper-text', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                // type: 'fraction',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
             simulateTouch: false,
             // effect: 'fade',
             // fadeEffect: {
