@@ -601,10 +601,33 @@ body {
         .l {
             width: 58%;
             padding-left: 30px;
+            position: relative;
             @media  (max-width: $breakpoint-lg-min) {
                 width: 100%;
                 margin-bottom: 60px;
                 padding-left: 0;
+            }
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 100%;
+                margin-bottom: 60px;
+                padding-left: 0;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-bottom: 0;
+            }
+            .inet {
+                position: absolute;
+                // right: 1.5%;
+                right: 3.5%;
+                top: -23%;
+                background: $color-red;
+                padding: 5px;
+                border-radius: 10px;
+                width: 40px;
+                height: 40px;
+                path {
+                    fill: $color-white;
+                }
             }
             .tit {
                 font-family: 'Furore';
@@ -619,6 +642,9 @@ body {
                 }
                 @media  (max-width: $breakpoint-lg-min) {
                     font-size: 46px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    font-size: 36px;
                 }
                 
                 
@@ -643,8 +669,8 @@ body {
                 @media  (max-width: $breakpoint-sm-min) {
                     width: 100%;
                     line-height: 101%;
-                    font-size: 18px;
-                    margin-bottom: 80px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
                 }
             }
             .btn {
@@ -660,6 +686,7 @@ body {
                 z-index: 1;
                 @media  (max-width: $breakpoint-sm-min) {
                     width: 100%;
+                    display: none;
                 }
                 &::before {
                     content: '';
@@ -690,18 +717,24 @@ body {
             width: 42%;
             overflow: hidden;
             @media  (max-width: $breakpoint-lg-min) {
-                width: 80%;
-                display: none;
+                width: 70%;
+                
+                transform: translateX(30%);
+                // display: none;
             }
             .r_wr {
                 width: 100%;
-                height: 520px;
+                height: 490px;
                 background: linear-gradient(134.63deg, $color-red 14.24%, #ed7872 105.08%);
                 border-radius: 30px 0 0px 30px;
                 position: relative;
                 @media  (max-width: $breakpoint-lg-min) {
-                    height: 380px;
-                    border-radius: 30px;
+                    height: 430px;
+                    // border-radius: 30px;
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    height: 320px;
+                    // border-radius: 30px;
                 }
                 .speed_wr  {
                     position: absolute;
@@ -717,7 +750,10 @@ body {
                             width: auto;
                             margin-right: 60px;
                             @media  (max-width: $breakpoint-lg-min) {
-                                height: 280px;
+                                height: 320px;
+                            }
+                            @media  (max-width: $breakpoint-sm-min) {
+                                height: 270px;
                             }
                         }
                     }
