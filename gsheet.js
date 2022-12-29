@@ -3,17 +3,18 @@ $(function() {
       event.preventDefault();
    
       // Ссылка, которую получили на этапе публикации приложения
-      let appLink = "https://script.google.com/macros/s/AKfycby8LDGjGbzooax8v5Ge9una3rLHAEczUo7MpGSZNX7fP5QV-V8ur1XIwJQON35gCLigLw/exec";//"https://script.google.com/macros/s/AKfycbxW7vS6yaTwrjzHUOuW5K2a0k8v87GgRZoOeern069sBrMtrcY6VuxupLDc3x_P8NilJg/exec";
+      let appLink = "https://script.google.com/macros/s/AKfycby8LDGjGbzooax8v5Ge9una3rLHAEczUo7MpGSZNX7fP5QV-V8ur1XIwJQON35gCLigLw/exec";
    
       // Сообщение при успешной отправке данных
-    //   let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/10vvejibhHNpEIe5x69U4bqbGSbgP56Jv7z_1GQFmcc8/">тут</a>';
+      let successRespond = 'Заявка отправлена.';
    
       // Сообщение при ошибке в отправке данных
-    //   let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="#">#</a>';
+      let errorRespond = 'Не удалось отправить заявку.';
    
       // Id текущей формы
       let form = $('#' + $(this).attr('id'))[0];
-   
+      let formRespond = $(this).parent().find('.modal_t') || $('#modal2').find('.modal_t');
+
       // h2 с ответом формы
     //   let formRespond = $(this).find('.g-form__title_respond');
    
@@ -24,7 +25,7 @@ $(function() {
       // let preloader = $(this).find('.g-form__preloader');
    
       // Кнопка отправки формы
-      let submitButton = $(this).find('.form1-submit');
+      let submitButton = $(this).parent().find('.modal_t') ? $(this).find('.form-submit') : $('.btn_check');
    
    
       // FormData
@@ -53,11 +54,12 @@ $(function() {
    
       if(jqXHR.readyState === 4 && jqXHR.status === 200) {
    
-      // Прячем заголовок формы
-      formTitle.css({
-        'display': 'none'
-      });
-   
+      formRespond.html(successRespond);
+      
+      if (form.id === 'form2') {
+        Alpine.store('openModal2', true);
+      }
+
       // Прячем прелоадер
     //   preloader.css('opacity', '0');
    
@@ -71,39 +73,36 @@ $(function() {
         form.reset();
    
       } else {
-        formTitle.css({
-          'display': 'none'
-        });
-        // formRespond.html(errorRespond).css('color', '#c64b4b');
+        formRespond.html(errorRespond);
+
+        if (form.id === 'form2') {
+          Alpine.store('openModal2', true);
+        }
+
         // preloader.css('opacity', '0');
-        setTimeout( () => {
-          formRespond.css({
-            'display': 'none'
-          });
-          formTitle.css({
-            'display': 'block'
-          });
+        // setTimeout( () => {
+        //   formRespond.css({
+        //     'display': 'none'
+        //   });
    
-          submitButton.prop('disabled', false);
-        }, 5000);
+        //   submitButton.prop('disabled', false);
+        // }, 5000);
    
         console.log('Гугл не ответил статусом 200');
       }
     }).fail(function(res, textStatus, jqXHR) {
-      formTitle.css({
-        'display': 'none'
-      });
     //   preloader.css('opacity', '0');
-    //   formRespond.html('Не удалось отправить сообщение. Cвяжитесь с администратором сайта другим способом').css('color', '#c64b4b');
-      setTimeout( () => {
-        formRespond.css({
-          'display': 'none'
-        });
-        formTitle.css({
-          'display': 'block'
-        });
-        submitButton.prop('disabled', false); 
-      }, 5000);
+      formRespond.html(errorRespond);
+      if (form.id === 'form2') {
+        Alpine.store('openModal2', true);
+      }
+      // setTimeout( () => {
+      //   formRespond.css({
+      //     'display': 'none'
+      //   });
+
+      //   submitButton.prop('disabled', false); 
+      // }, 5000);
    
       console.log('Не удалось выполнить запрос по указанному в скрипте пути');
     }); 
