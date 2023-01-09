@@ -58,7 +58,7 @@ $(function() {
       
       if (form.id === 'form2') {
         modal2 = document.querySelector("#modal2");
-        setTimeout(() => {modal2.style.display = 'block'}, 1500)
+        modal2.style.display = 'block';
       }
 
       // Прячем прелоадер
