@@ -1963,12 +1963,12 @@ body {
 .footer {
   background: #AD6FFB;
   color: #fff;
-  padding: 40px 30px 40px;
+  padding: 40px 30px;
   border-top: 2px solid #fff;
 }
 @media (max-width: 576px) {
   .footer {
-    padding: 40px 15px 30px;
+    padding: 40px 15px 20px;
   }
 }
 .footer .title {
@@ -2079,7 +2079,7 @@ body {
 
 .transitions {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 50;
   height: 100vh;
   width: 100%;
@@ -2093,4 +2093,25 @@ body {
   transform: scaleY(0);
   background: #AD6FFB;
   width: 20%;
+}
+.transitions li:nth-child(odd) {
+  background: #9353E3;
+}
+
+.elegy {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  background: #fff;
+  color: #2B2B2B;
+}
+.elegy a {
+  color: #9353E3;
+}
+@media (max-width: 576px) {
+  .elegy {
+    padding: 15px 15px;
+  }
 }/*# sourceMappingURL=style.min.css.map */
