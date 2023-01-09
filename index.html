@@ -127,14 +127,14 @@
                     Оставьте свои контакты и наш менеджер свяжется с вами
                 </div>
 
-                <form class="form" id="form1" action="#" autocomplete="off" required>
+                <form class="form" id="form1" action="#" autocomplete="off">
                     <div class="form_item">
                         <label for="name1">Введите имя</label>
                         <input id="name1" name="Имя" type="text" placeholder="..." required>
                     </div>
                     <div class="form_item">
                         <label for="phone1">Введите телефон</label>
-                        <input id="phone1" name="Телефон" type="text" placeholder="+7(___)__-__">
+                        <input id="phone1" name="Телефон" type="text" placeholder="+7(___)__-__" required>
                     </div>
                     <div class="modal_bottom">
                         <button type="submit" class="form-submit">Отправить</button>
@@ -1084,7 +1084,7 @@
                     </div>
                 </div>
     
-                <button type="submit" class="btn_check" @click="setTimeout(() => {openModal2 = true}, 1500)">
+                <button type="submit" class="btn_check">
                     Оставить заявку
                 </button>
             </form>

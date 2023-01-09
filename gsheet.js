@@ -1,7 +1,7 @@
 $(function() {
     $(".form").submit(function (event) {
       event.preventDefault();
-   
+
       // Ссылка, которую получили на этапе публикации приложения
       let appLink = "https://script.google.com/macros/s/AKfycby8LDGjGbzooax8v5Ge9una3rLHAEczUo7MpGSZNX7fP5QV-V8ur1XIwJQON35gCLigLw/exec";
    
@@ -57,7 +57,8 @@ $(function() {
       formRespond.html(successRespond);
       
       if (form.id === 'form2') {
-        Alpine.store('openModal2', true);
+        modal2 = document.querySelector("#modal2");
+        setTimeout(() => {modal2.style.display = 'block'}, 1500)
       }
 
       // Прячем прелоадер
