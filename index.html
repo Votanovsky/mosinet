@@ -1089,9 +1089,9 @@
                 </button>
             </form>
 
-            <div class="modal_wr" id="modal2" x-bind:class="{ 'flex': openModal2 }">
+            <div class="modal_wr" id="modal2">
                 <div class="modal">
-                  <div class="close" @click="openModal2 = false">
+                    <div class="close" @click="document.querySelector('#modal2').style.display = 'none'">
                       <div class="close_i"></div>
                       <div class="close_i"></div>
                   </div>
