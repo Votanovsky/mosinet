@@ -37,7 +37,6 @@ li {
   background: #9353E3;
   display: flex;
   flex-direction: column;
-  border-radius: 0 0 30px 30px;
 }
 @media (max-width: 768px) {
   .rate_wrapper {
@@ -346,7 +345,7 @@ body {
 }
 @media (max-width: 576px) {
   .modal_wr .modal {
-    width: 360px;
+    width: 340px;
   }
 }
 .modal_wr .modal .form {
@@ -427,6 +426,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   border-radius: 0 0 30px 30px;
 }
 .modal_wr .modal_bottom button {
@@ -1310,6 +1310,13 @@ body {
 .section_four .rate_wr .rate--red svg path {
   fill: #fff;
 }
+.section_four .rate_wr .rate--blue {
+  background: rgb(73, 73, 225);
+  color: #fff;
+}
+.section_four .rate_wr .rate--blue svg path {
+  fill: #fff;
+}
 .section_four .rate_wr .rate:last-child {
   margin-right: 0;
 }
@@ -2053,4 +2060,37 @@ body {
 }
 .flex {
   display: flex;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #AD6FFB;
+  z-index: 9999;
+  transform: scaleX(0);
+}
+
+.loader-overlay.two {
+  background-color: #E43931;
+}
+
+.transitions {
+  display: flex;
+  position: absolute;
+  z-index: 50;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.transitions li {
+  transform: scaleY(0);
+  background: #AD6FFB;
+  width: 20%;
 }/*# sourceMappingURL=style.min.css.map */

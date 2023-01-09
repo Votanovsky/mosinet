@@ -3,7 +3,7 @@
     background: $color-purple;
     display: flex;
     flex-direction: column;
-    border-radius: 0 0 30px 30px;
+    // border-radius: 0 0 30px 30px;
     @media  (max-width: $breakpoint-md-min) {
         padding: 100px 10px 80px;
     }

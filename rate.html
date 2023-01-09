@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MosINET</title>
+    <title>MosProvider</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="media/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="media/fav/favicon-32x32.png">
@@ -28,11 +28,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+    <script src="https://unpkg.com/@barba/core"></script>
+
     <link rel="stylesheet" href="style.min.css">
 </head>
-<body>
+<body data-barba="wrapper">
+
+ <!-- PAGE TRANSITION ANIMATION -->
+ <!-- <div class="loader-overlay one"></div>
+ <div class="loader-overlay two"></div> -->
+ <ul class="transitions">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+ </ul>
+
+<div class="all-root-barba" >
+
     <header class="header">
-        <a href="index.html" class="logo"><span>MOS</span>INET</a>
+        <a href="index.html" class="logo"><span>MOS</span>PROVIDER</a>
 
         <nav class="nav">
             <ul class="ul">
@@ -43,7 +59,7 @@
                     <a href="rate.html">Тарифы</a>
                 </li>
                 <li class="li">
-                    <a href="index.html#prov">Провайдеры</a>
+                    <a href="#prov">Провайдеры</a>
                 </li>
                 <li class="li">
                     <a href="#cont">Контакты</a>
@@ -67,12 +83,22 @@
         </nav>
     </header>
 
+   
+
     <div class="navbar">
-        <ul>
-          <li><a data-text="1" href="#">+7 (495) 411-23-53</a></li>
-          <li><a data-text="2" href="#">Тарифы</a></li>
-          <li><a data-text="3"href="#">Провайдеры</a></li>
-          <li><a data-text="4" href="#">Контакты</a></li>
+        <ul class="ul">
+            <li class="li">
+                <a href="tel:+74954112353">+7 (495) 411-23-53</a>
+            </li>
+            <li class="li">
+                <a href="rate.html">Тарифы</a>
+            </li>
+            <li class="li">
+                <a href="#prov">Провайдеры</a>
+            </li>
+            <li class="li">
+                <a href="#cont">Контакты</a>
+            </li>
         </ul>
     </div>
     <div id="bg-circle"></div>
@@ -94,7 +120,7 @@
         </ul>
     </div> -->
 
-    <main class="main" x-data="{openModal: false}">
+    <main data-barba="container" data-barba-namespace="rate" class="main" x-data="{openModal: false}">
 
     
         <div class="rate_wrapper">
@@ -1364,37 +1390,163 @@
 
         </div>
 
-
-
-
-
-
-        <a name="cont">
-            <footer class="footer">
-                <!-- <a name="cont"></a> -->
-                <div class="title">
-                    Контанты:
-                </div>
-    
-                <div class="contacts_wr">
-                    <div class="col">
-                        <a href="8-495-411-23-53" type="phone">+7(495)411-23-53</a>
-                        <a href="8-495-411-23-53" type="phone">Info@moskvanet.ru</a>
-                    </div>
-    
-                    <div class="col">
-                        <a href="8-495-411-23-53" type="phone">WhatsApp</a>
-                        <a href="8-495-411-23-53" type="phone">Telegram</a>
-                    </div>
-                </div>
-            </footer>
-        </a>
     </main>
 
+    <footer class="footer">
+        <!-- <a name="cont"></a> -->
+        <div class="title">
+            Контакты:
+        </div>
+
+        <div class="contacts_wr">
+            <div class="col">
+                <a href="tel:+74954112353" type="phone">+7(495)411-23-53</a>
+                <a href="#" type="phone">Info@moskvanet.ru</a>
+            </div>
+
+            <div class="col">
+                <a href="#" type="phone">WhatsApp</a>
+                <a href="#" type="phone">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
 
 
     <script>        
 
+                // barbaJS ==========
+
+            function pageTransition() {
+            const tl_page = gsap.timeline()
+
+            tl_page.to('ul.transitions li', {
+                duration: .5,
+                scaleY: 1,
+                transformOrigin: 'bottom left',
+                stagger: .2
+            })
+
+            tl_page.to('ul.transitions li',{
+                duration: .5,
+                scaleY: 0,
+                transformOrigin: 'bottom left',
+                stagger: .1,
+                delay: .1
+            })
+        }
+        // function contentAnimation() {
+        //     const tl_page_two = gsap.timeline()
+
+        //     // tl_page_two.from()
+        // }
+        function delay(n) {
+            n = n || 2000;  
+            return new Promise((done) => {
+                setTimeout(() => {
+                    done();
+                }, n);
+            });
+        }
+        function removeToggle() {
+            document.querySelector('.navbar-toggle').classList.remove("active");
+        }
+        barba.init({
+            sync: true,
+
+            transitions: [{
+                async leave(data) {
+                    closeNavbar();
+                    let isOpen = false;
+                    
+                    const done = this.async()
+                    pageTransition()
+                    await delay(1500)
+                    done()
+
+                    removeToggle()
+                    
+                },
+
+                // async enter(data) {
+                //     // contentAnimation()
+                //     closeNavbar();
+                // },
+
+                // async once(data) {
+                //     // contentAnimation()
+                //     closeNavbar();
+                // },
+            }]
+        })
+        
+
+
+
+        // function pageAnimation(){
+        //     gsap.to(".loader-overlay.one", {
+        //         duration: 1,
+        //         scaleX: 1,
+        //         transformOrigin: "left",
+        //         ease: "power1.inOut"
+        //     });
+        //     gsap.to(".loader-overlay.one", {
+        //         duration: 1,
+        //         scaleX: 0,
+        //         transformOrigin: "right",
+        //         ease: "power1.inOut",
+        //         delay: 2
+        //     });
+        
+        //     gsap.to(".loader-overlay.two", {
+        //         duration: 1.4,
+        //         scaleX: 1,
+        //         transformOrigin: "left",
+        //         ease: "power1.inOut"
+        //     });
+        //     gsap.to(".loader-overlay.two", {
+        //         duration: 1.4,
+        //         scaleX: 0,
+        //         transformOrigin: "right",
+        //         ease: "power1.inOut",
+        //         delay: 1.6
+        //     });
+        // }
+        // function delay(n) {
+        //     n = n || 2000;  
+        //     return new Promise((done) => {
+        //         setTimeout(() => {
+        //             done();
+        //         }, n);
+        //     });
+        // }
+
+        // barba.init({
+        //     sync: true,
+        
+        //     transitions: [{
+        //         async leave () {
+        
+        //             pageAnimation();
+        //             await delay(2000);
+        //             // killAnimations();
+        //             // await delay(1000);
+
+        //         },
+        //         async enter() {
+                    
+        //             const done = this.async();
+
+        //             // console.log(gsap.globalTimeline.getChildren());
+        //             loadPage()
+        //             window.scroll(0, 0);
+        //             done()
+        //             barba.destroy()
+
+        //         }
+        //     }],
+        // });
 
         // toggle Menu ===================
 
