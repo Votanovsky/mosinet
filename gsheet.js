@@ -58,7 +58,7 @@ $(function() {
       
       if (form.id === 'form2') {
         modal2 = document.querySelector("#modal2");
-        modal2.style.display = 'block';
+        modal2.style.display = 'flex';
       }
 
       // Прячем прелоадер
@@ -77,7 +77,8 @@ $(function() {
         formRespond.html(errorRespond);
 
         if (form.id === 'form2') {
-          Alpine.store('openModal2', true);
+          modal2 = document.querySelector("#modal2");
+          modal2.style.display = 'flex';
         }
 
         // preloader.css('opacity', '0');
@@ -95,7 +96,8 @@ $(function() {
     //   preloader.css('opacity', '0');
       formRespond.html(errorRespond);
       if (form.id === 'form2') {
-        Alpine.store('openModal2', true);
+        modal2 = document.querySelector("#modal2");
+        modal2.style.display = 'flex';
       }
       // setTimeout( () => {
       //   formRespond.css({

@@ -113,7 +113,7 @@
         </ul>
     </div> -->
 
-    <main data-barba="container" data-barba-namespace="home" class="main" x-data="{openModal1: false, openModal2: false}">
+    <main data-barba="container" data-barba-namespace="home" class="main" x-data="{openModal1: false}">
 
         <div class="modal_wr" id="modal1" x-bind:class="{ 'flex': openModal1 }">
             <div class="modal">
@@ -1299,7 +1299,6 @@
 
         let swiper_text = new Swiper('.swiper-text', {
             // Optional parameters
-            height: 500,
             breakpoints: {
                 768: {
                     direction: 'vertical',
