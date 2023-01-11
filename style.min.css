@@ -270,8 +270,8 @@ body {
   border-radius: 6px;
   background: #fff;
   transition: 0.5s;
-  -webkit-animation: progressBullet 6.5s linear infinite;
-          animation: progressBullet 6.5s linear infinite;
+  -webkit-animation: progressBullet 9.5s linear infinite;
+          animation: progressBullet 9.5s linear infinite;
 }
 
 @-webkit-keyframes progressBullet {
@@ -1017,13 +1017,6 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 768px) {
-  .section_two .services_wr .l img {
-    height: 500px !important;
-    z-index: 2;
-    opacity: 1 !important;
-  }
-}
 .section_two .services_wr .r {
   width: 40%;
   padding: 20px 40px 20px 40px;
@@ -1034,9 +1027,11 @@ body {
 }
 @media (max-width: 768px) {
   .section_two .services_wr .r {
-    height: 240px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     width: 100%;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 70px 20px;
   }
 }
 .section_two .services_wr .r .r_wr {

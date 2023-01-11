@@ -1270,7 +1270,11 @@
         // swiper =========== 
         let swiper = new Swiper('.swiper', {
             // Optional parameters
-            direction: 'vertical',
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                }
+            },
             loop: true,
             // autoplay: {
             //     delay: 6000,
@@ -1295,10 +1299,15 @@
 
         let swiper_text = new Swiper('.swiper-text', {
             // Optional parameters
-            direction: 'vertical',
+            height: 500,
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                }
+            },
             loop: true,
             autoplay: {
-                delay: 6000,
+                delay: 9000,
                 disableOnInteraction: false,
             },
             pagination: {
