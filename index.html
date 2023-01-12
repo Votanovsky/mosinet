@@ -61,9 +61,9 @@
                 <!-- <li class="li">
                     <a href="#prov">Провайдеры</a>
                 </li> -->
-                <li class="li">
+                <!-- <li class="li">
                     <a href="#cont">Контакты</a>
-                </li>
+                </li> -->
             </ul>
 
             <!-- <div class="burger">
@@ -89,8 +89,8 @@
         <ul>
           <li><a data-text="1" href="tel:+74954112353">+7 (495) 411-23-53</a></li>
           <li><a data-text="2" href="rate.html">Тарифы</a></li>
-          <li><a data-text="3"href="#prov">Провайдеры</a></li>
-          <li><a data-text="4" href="#cont">Контакты</a></li>
+          <!-- <li><a data-text="3"href="#prov">Провайдеры</a></li> -->
+          <!-- <li><a data-text="4" href="#cont">Контакты</a></li> -->
         </ul>
     </div>
     <div id="bg-circle"></div>
@@ -113,7 +113,7 @@
         </ul>
     </div> -->
 
-    <main data-barba="container" data-barba-namespace="home" class="main" x-data="{openModal1: false, openModal2: false}">
+    <main data-barba="container" data-barba-namespace="home" class="main" x-data="{openModal1: false}">
 
         <div class="modal_wr" id="modal1" x-bind:class="{ 'flex': openModal1 }">
             <div class="modal">
@@ -127,14 +127,14 @@
                     Оставьте свои контакты и наш менеджер свяжется с вами
                 </div>
 
-                <form class="form" id="form1" action="#" autocomplete="off" required>
+                <form class="form" id="form1" action="#" autocomplete="off">
                     <div class="form_item">
                         <label for="name1">Введите имя</label>
                         <input id="name1" name="Имя" type="text" placeholder="..." required>
                     </div>
                     <div class="form_item">
                         <label for="phone1">Введите телефон</label>
-                        <input id="phone1" name="Телефон" type="text" placeholder="+7(___)__-__">
+                        <input id="phone1" name="Телефон" type="text" placeholder="+7(___)__-__" required>
                     </div>
                     <div class="modal_bottom">
                         <button type="submit" class="form-submit">Отправить</button>
@@ -763,14 +763,14 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>2000 ₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе 
                         </p>
 
                         
-                    </div>
+                    </a>
                 </div>
                 <div class="content" x-show="tab == 'tab2'">
                     <div class="name">
@@ -831,12 +831,12 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>850₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="content" x-show="tab == 'tab3'">
                     <div class="name">
@@ -897,12 +897,12 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>1350₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе
                         </p>
-                    </div>
+                    </a>
                 </div>
                 
             </div>
@@ -1084,14 +1084,14 @@
                     </div>
                 </div>
     
-                <button type="submit" class="btn_check" @click="setTimeout(() => {openModal2 = true}, 1500)">
+                <button type="submit" class="btn_check">
                     Оставить заявку
                 </button>
             </form>
 
-            <div class="modal_wr" id="modal2" x-bind:class="{ 'flex': openModal2 }">
+            <div class="modal_wr" id="modal2">
                 <div class="modal">
-                  <div class="close" @click="openModal2 = false">
+                    <div class="close" @click="document.querySelector('#modal2').style.display = 'none'">
                       <div class="close_i"></div>
                       <div class="close_i"></div>
                   </div>
@@ -1270,7 +1270,11 @@
         // swiper =========== 
         let swiper = new Swiper('.swiper', {
             // Optional parameters
-            direction: 'vertical',
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                }
+            },
             loop: true,
             // autoplay: {
             //     delay: 6000,
@@ -1295,10 +1299,14 @@
 
         let swiper_text = new Swiper('.swiper-text', {
             // Optional parameters
-            direction: 'vertical',
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                }
+            },
             loop: true,
             autoplay: {
-                delay: 6000,
+                delay: 9000,
                 disableOnInteraction: false,
             },
             pagination: {
