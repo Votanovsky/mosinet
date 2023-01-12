@@ -705,7 +705,7 @@ body {
                 &::before {
                     content: '';
                     inset: 0;
-                    border-radius: 30px;
+                    border-radius: 20px;
                     position: absolute;
                     z-index: -1;
                     transition: .35s ease-in-out;
@@ -1582,7 +1582,7 @@ body {
                 &::before {
                     content: '';
                     inset: 0;
-                    border-radius: 30px;
+                    border-radius: 20px;
                     position: absolute;
                     z-index: -1;
                     transition: .35s ease-in-out;
@@ -1837,3 +1837,11 @@ body {
     }
     
 }
+
+// .swiper-slide {
+//     display: none;
+// }
+
+// .swiper-slide-active {
+//     display: block;
+// }

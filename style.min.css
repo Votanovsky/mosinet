@@ -34,7 +34,7 @@ li {
 }
 .rate_wrapper {
   padding: 120px 30px 80px;
-  background: #9353E3;
+  background: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -824,7 +824,7 @@ body {
 .section_one .l .btn::before {
   content: "";
   inset: 0;
-  border-radius: 30px;
+  border-radius: 20px;
   position: absolute;
   z-index: -1;
   transition: 0.35s ease-in-out;
@@ -1808,7 +1808,7 @@ body {
 .section_seven .form .btn_check::before {
   content: "";
   inset: 0;
-  border-radius: 30px;
+  border-radius: 20px;
   position: absolute;
   z-index: -1;
   transition: 0.35s ease-in-out;
