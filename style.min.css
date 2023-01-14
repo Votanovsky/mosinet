@@ -256,6 +256,11 @@ body {
   padding: 0;
   margin: 0;
 }
+@media (max-width: 576px) {
+  .swiper-pagination-bullet {
+    width: 32px;
+  }
+}
 
 .swiper-pagination-bullet-active {
   width: 120px;
@@ -272,6 +277,11 @@ body {
   transition: 0.5s;
   -webkit-animation: progressBullet 9.5s linear infinite;
           animation: progressBullet 9.5s linear infinite;
+}
+@media (max-width: 576px) {
+  .swiper-pagination-bullet-active {
+    width: 96px;
+  }
 }
 
 @-webkit-keyframes progressBullet {
@@ -1032,7 +1042,11 @@ body {
     height: max-content;
     width: 100%;
     padding: 20px 20px 120px 20px;
-    min-height: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .section_two .services_wr .r {
+    height: 280px;
   }
 }
 .section_two .services_wr .r .r_wr {
@@ -1131,6 +1145,7 @@ body {
 .section_two .services_wr .r .slide .count {
   -webkit-clip-path: none !important;
           clip-path: none !important;
+  transform: translate(-10px, 0px);
 }
 .section_two .services_wr .r .slide .dots {
   height: 6px;
@@ -1462,7 +1477,6 @@ body {
     margin-bottom: 6px;
     font-size: 20px;
     height: 60px;
-    border-radius: 10px;
   }
 }
 @media (max-width: 576px) {
@@ -1470,6 +1484,7 @@ body {
     font-size: 14px;
     width: 100%;
     height: 50px;
+    border-radius: 10px;
   }
 }
 .section_five .provider_wr .nav .name:last-child {
@@ -1501,6 +1516,7 @@ body {
 @media (max-width: 576px) {
   .section_five .provider_wr .content {
     padding: 20px 30px 230px;
+    border-radius: 10px;
   }
 }
 .section_five .provider_wr .content .circle {
@@ -1716,17 +1732,25 @@ body {
 @media (max-width: 576px) {
   .section_six .line .it {
     margin-right: 10px;
+    border-radius: 10px;
+    padding-bottom: 4px;
   }
 }
 .section_six .line .it:nth-child(even) {
   color: #fff;
   background: #E43931;
-  padding: 6px 15px 6px;
+  padding: 6px 15px 4px;
   border-radius: 20px;
 }
 @media (max-width: 992px) {
   .section_six .line .it:nth-child(even) {
     padding-top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .section_six .line .it:nth-child(even) {
+    padding-top: 0;
+    border-radius: 10px;
   }
 }
 .section_seven {

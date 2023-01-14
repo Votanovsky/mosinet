@@ -1185,8 +1185,10 @@
                     let isOpen = false;
                     const done = this.async()
                     pageTransition()
+                    
                     await delay(1500)
                     
+                    window.scroll(0, 0);
                     done()
 
                     removeToggle()

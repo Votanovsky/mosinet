@@ -86,6 +86,10 @@ body {
     transition: .5s;
     padding: 0;
     margin: 0;
+
+    @media  (max-width: $breakpoint-sm-min) {
+        width: 32px;
+    }
 }
 .swiper-pagination-bullet-active {
     // background: rgb(255,255,255);
@@ -104,6 +108,10 @@ body {
         transition: .5s;
         animation: progressBullet 9.5s linear infinite;
     }
+    @media  (max-width: $breakpoint-sm-min) {
+        width: 96px;
+    }
+    
 }
 @keyframes progressBullet {
     0% {
@@ -896,9 +904,10 @@ body {
                     height: max-content;
                     width: 100%;
                     padding: 20px 20px 120px 20px;
-                    min-height: 280px;
                 }
-                
+                @media  (max-width: $breakpoint-md-min) {
+                    height: 280px; 
+                }
                 .r_wr {
                     width: 100%;
                     .service_name {
@@ -980,6 +989,7 @@ body {
                     }
                     .count {
                         clip-path: none !important;
+                        transform: translate(-10px, 0px);
                         
                     }
                     .dots {
@@ -1295,12 +1305,13 @@ body {
                         margin-bottom: 6px;
                         font-size: 20px;
                         height: 60px;
-                        border-radius: 10px;
+                        
                     }
                     @media  (max-width: $breakpoint-sm-min) {
                         font-size: 14px;
                         width: 100%;
                         height: 50px;
+                        border-radius: 10px;
                     }
                     &:last-child {
                         margin-bottom: 0;
@@ -1327,9 +1338,11 @@ body {
                     width: auto;
                     padding-bottom: 240px;
                     height: auto;
+                    
                 }
                 @media  (max-width: $breakpoint-sm-min) {
                     padding: 20px 30px 230px;
+                    border-radius: 10px;
                 }
                 .circle {
                     border: 10px solid $color-purple;
@@ -1504,14 +1517,20 @@ body {
                 }
                 @media  (max-width: $breakpoint-sm-min) {
                     margin-right: 10px;
+                    border-radius: 10px;
+                    padding-bottom: 4px;
                 }
                 &:nth-child(even) {
                     color: $color-white;
                     background: $color-red;
-                    padding: 6px 15px 6px;
+                    padding: 6px 15px 4px;
                     border-radius: 20px;
                     @media  (max-width: $breakpoint-lg-min) {
                         padding-top: 0;
+                    }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        padding-top: 0;
+                        border-radius: 10px;
                     }
                 }
             }
