@@ -1478,28 +1478,27 @@
     return (vpd * 2) / circleWidth; // Circle radius
     };
 
+    const navbarTimeline = gsap.timeline();
+    navbarTimeline.to(".navbar", 0, { display: "flex" });
+    navbarTimeline.to("#bg-circle", 1.5, {scale: getVpdr(),ease: Expo.easeInOut});
+    navbarTimeline.staggerFromTo(".navbar ul li",0.5,{ y: 25, opacity: 0 },{ y: 0, opacity: 1 },0.1,1); 
+    navbarTimeline.pause()  
     const openNavbar = () => {
-    const openTimeline = new TimelineMax();
-    openTimeline.to(".navbar", 0, { display: "flex" });
-    openTimeline.to("#bg-circle", 1.5, {scale: getVpdr(),ease: Expo.easeInOut});
-    openTimeline.staggerFromTo(".navbar ul li",0.5,{ y: 25, opacity: 0 },{ y: 0, opacity: 1 },0.1,1);
+        navbarTimeline.play()
+        document.querySelector('.navbar-toggle').classList.add("active");
     };
 
     const closeNavbar = () => {
-    const closeTimeline = new TimelineMax();
-    closeTimeline.staggerFromTo(".navbar ul li",0.5,{ y: 0, opacity: 1, delay: 0.5 },{ y: 25, opacity: 0 },-0.1);
-    closeTimeline.to("#bg-circle", 1, {scale: 0,ease: Expo.easeInOut,delay: -0.5});
-    closeTimeline.to(".navbar", 0, { display: "none" });
+        navbarTimeline.reverse()
+        document.querySelector('.navbar-toggle').classList.remove("active");
     };
 
     let isOpen = false;
 
     toggle.onclick = function () {
     if (isOpen) {
-        this.classList.remove("active");
         closeNavbar();
     } else {
-        this.classList.add("active");
         openNavbar();
     }
     isOpen = !isOpen;
@@ -1515,7 +1514,6 @@
 
     function loadPage() {
         var tweens = []
-        console.log('barba init')
         barba.init({
             sync: true,
             
@@ -1547,7 +1545,6 @@
         
         if (document.title === "MosProvider") {
             // swiper =========== 
-            console.log('swiper')
             let swiper = new Swiper('.swiper', {
                 // Optional parameters
                 breakpoints: {
@@ -1609,8 +1606,6 @@
             swiper.controller.control = swiper_text
             swiper_text.controller.control = swiper
 
-
-            console.log('scroll-trigger')
 
             gsap.registerPlugin(ScrollTrigger);
 
