@@ -86,6 +86,10 @@ body {
     transition: .5s;
     padding: 0;
     margin: 0;
+
+    @media  (max-width: $breakpoint-sm-min) {
+        width: 32px;
+    }
 }
 .swiper-pagination-bullet-active {
     // background: rgb(255,255,255);
@@ -104,6 +108,10 @@ body {
         transition: .5s;
         animation: progressBullet 9.5s linear infinite;
     }
+    @media  (max-width: $breakpoint-sm-min) {
+        width: 96px;
+    }
+    
 }
 @keyframes progressBullet {
     0% {
@@ -663,7 +671,7 @@ body {
                 span {
                     background: $color-red;
                     padding: 1px 14px 7px;
-                    border-radius: 10px;
+                    border-radius: 6px;
                     line-height: 100%;
                 }
             }
@@ -705,7 +713,7 @@ body {
                 &::before {
                     content: '';
                     inset: 0;
-                    border-radius: 30px;
+                    border-radius: 20px;
                     position: absolute;
                     z-index: -1;
                     transition: .35s ease-in-out;
@@ -782,7 +790,7 @@ body {
                 display: block;
                 width: 100%;
                 line-height: 105%;
-                font-size: 18px;
+                font-size: 16px;
                 margin-top: 30px;
                 text-align: left;
             }
@@ -895,9 +903,11 @@ body {
                     // height: 240px;
                     height: max-content;
                     width: 100%;
-                    padding: 20px 20px 70px 20px;
+                    padding: 20px 20px 120px 20px;
                 }
-                
+                @media  (max-width: $breakpoint-md-min) {
+                    height: 280px; 
+                }
                 .r_wr {
                     width: 100%;
                     .service_name {
@@ -979,6 +989,7 @@ body {
                     }
                     .count {
                         clip-path: none !important;
+                        transform: translate(-10px, 0px);
                         
                     }
                     .dots {
@@ -1290,14 +1301,17 @@ body {
                         font-size: 24px;
                     }
                     @media  (max-width: $breakpoint-lg-min) {
-                        margin-right: 10px;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
                         font-size: 20px;
                         height: 60px;
+                        
                     }
                     @media  (max-width: $breakpoint-sm-min) {
                         font-size: 14px;
                         width: 100%;
                         height: 50px;
+                        border-radius: 10px;
                     }
                     &:last-child {
                         margin-bottom: 0;
@@ -1324,9 +1338,11 @@ body {
                     width: auto;
                     padding-bottom: 240px;
                     height: auto;
+                    
                 }
                 @media  (max-width: $breakpoint-sm-min) {
                     padding: 20px 30px 230px;
+                    border-radius: 10px;
                 }
                 .circle {
                     border: 10px solid $color-purple;
@@ -1501,14 +1517,20 @@ body {
                 }
                 @media  (max-width: $breakpoint-sm-min) {
                     margin-right: 10px;
+                    border-radius: 10px;
+                    padding-bottom: 4px;
                 }
                 &:nth-child(even) {
                     color: $color-white;
                     background: $color-red;
-                    padding: 6px 15px 6px;
+                    padding: 6px 15px 4px;
                     border-radius: 20px;
                     @media  (max-width: $breakpoint-lg-min) {
                         padding-top: 0;
+                    }
+                    @media  (max-width: $breakpoint-sm-min) {
+                        padding-top: 0;
+                        border-radius: 10px;
                     }
                 }
             }
@@ -1583,7 +1605,7 @@ body {
                 &::before {
                     content: '';
                     inset: 0;
-                    border-radius: 30px;
+                    border-radius: 20px;
                     position: absolute;
                     z-index: -1;
                     transition: .35s ease-in-out;
@@ -1838,3 +1860,11 @@ body {
     }
     
 }
+
+// .swiper-slide {
+//     display: none;
+// }
+
+// .swiper-slide-active {
+//     display: block;
+// }

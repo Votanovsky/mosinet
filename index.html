@@ -58,12 +58,12 @@
                 <li class="li">
                     <a href="rate.html">Тарифы</a>
                 </li>
-                <li class="li">
+                <!-- <li class="li">
                     <a href="#prov">Провайдеры</a>
-                </li>
-                <li class="li">
+                </li> -->
+                <!-- <li class="li">
                     <a href="#cont">Контакты</a>
-                </li>
+                </li> -->
             </ul>
 
             <!-- <div class="burger">
@@ -89,8 +89,8 @@
         <ul>
           <li><a data-text="1" href="tel:+74954112353">+7 (495) 411-23-53</a></li>
           <li><a data-text="2" href="rate.html">Тарифы</a></li>
-          <li><a data-text="3"href="#prov">Провайдеры</a></li>
-          <li><a data-text="4" href="#cont">Контакты</a></li>
+          <!-- <li><a data-text="3"href="#prov">Провайдеры</a></li> -->
+          <!-- <li><a data-text="4" href="#cont">Контакты</a></li> -->
         </ul>
     </div>
     <div id="bg-circle"></div>
@@ -763,14 +763,14 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>2000 ₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе 
                         </p>
 
                         
-                    </div>
+                    </a>
                 </div>
                 <div class="content" x-show="tab == 'tab2'">
                     <div class="name">
@@ -831,12 +831,12 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>850₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="content" x-show="tab == 'tab3'">
                     <div class="name">
@@ -897,12 +897,12 @@
                         </div>
                     </div>
 
-                    <div class="circle">
+                    <a href="rate.html" class="circle">
                         <div>1350₽ / месяц</div>
                         <p>
                             Подробнее об этом тарифе
                         </p>
-                    </div>
+                    </a>
                 </div>
                 
             </div>
@@ -1240,7 +1240,6 @@
                 },
                 
                 async enter(data) {
-                    console.log(barba.data)
                     const done = this.async()
                     removeToggle()
                     
