@@ -1007,7 +1007,7 @@ body {
 }
 @media (max-width: 576px) {
   .section_two .services_wr {
-    height: 88vh;
+    height: auto;
   }
 }
 .section_two .services_wr .l {
@@ -1037,16 +1037,11 @@ body {
 }
 @media (max-width: 768px) {
   .section_two .services_wr .r {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 100%;
-    padding: 20px 20px 120px 20px;
-  }
-}
-@media (max-width: 768px) {
-  .section_two .services_wr .r {
-    height: 280px;
+    padding: 20px 20px 7vh 20px;
   }
 }
 .section_two .services_wr .r .r_wr {
