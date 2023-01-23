@@ -2316,4 +2316,29 @@ body {
   .elegy {
     padding: 15px 15px;
   }
+}
+
+.load-anim {
+  display: none;
+  width: 72px;
+  height: 72px;
+  overflow: visible;
+  padding-top: 30px;
+  margin: 0 auto 20px auto;
+}
+.load-anim circle {
+  transform-origin: 50px 50px;
+  stroke: #9353E3;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.min.css.map */

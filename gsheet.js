@@ -13,7 +13,10 @@ $(function() {
    
       // Id текущей формы
       let form = $('#' + $(this).attr('id'))[0];
+      console.log(form);
       let formRespond = $(this).parent().find('.modal_t') || $('#modal2').find('.modal_t');
+      console.log(formRespond);
+      let formLoader = $(this).parent().find('.load-anim') || $('#modal2').find('.load-anim');
 
       // h2 с ответом формы
     //   let formRespond = $(this).find('.g-form__title_respond');
@@ -45,6 +48,12 @@ $(function() {
    
         // Делаем неактивной кнопку отправки
         submitButton.prop('disabled', true);
+        formRespond[0].style.display = 'none';
+        formLoader[0].style.display = 'block';
+        if (form.id === 'form2') {
+          modal2 = document.querySelector("#modal2");
+          modal2.style.display = 'flex';
+        }
    
         // валидация других полей.
    
@@ -53,13 +62,10 @@ $(function() {
     }).done(function(res, textStatus, jqXHR) {
    
       if(jqXHR.readyState === 4 && jqXHR.status === 200) {
-   
       formRespond.html(successRespond);
       
-      if (form.id === 'form2') {
-        modal2 = document.querySelector("#modal2");
-        modal2.style.display = 'flex';
-      }
+      formLoader[0].style.display = 'none';
+      formRespond[0].style.display = 'block';
 
       // Прячем прелоадер
     //   preloader.css('opacity', '0');
@@ -76,10 +82,13 @@ $(function() {
       } else {
         formRespond.html(errorRespond);
 
-        if (form.id === 'form2') {
-          modal2 = document.querySelector("#modal2");
-          modal2.style.display = 'flex';
-        }
+        
+        formLoader[0].style.display = 'none';
+        formRespond[0].style.display = 'block';
+        // if (form.id === 'form2') {
+        //   modal2 = document.querySelector("#modal2");
+        //   modal2.style.display = 'flex';
+        // }
 
         // preloader.css('opacity', '0');
         // setTimeout( () => {
@@ -90,15 +99,18 @@ $(function() {
         //   submitButton.prop('disabled', false);
         // }, 5000);
    
-        console.log('Гугл не ответил статусом 200');
+        // console.log('Гугл не ответил статусом 200');
       }
     }).fail(function(res, textStatus, jqXHR) {
     //   preloader.css('opacity', '0');
       formRespond.html(errorRespond);
-      if (form.id === 'form2') {
-        modal2 = document.querySelector("#modal2");
-        modal2.style.display = 'flex';
-      }
+      
+      formLoader[0].style.display = 'none';
+      formRespond[0].style.display = 'block';
+      // if (form.id === 'form2') {
+      //   modal2 = document.querySelector("#modal2");
+      //   modal2.style.display = 'flex';
+      // }
       // setTimeout( () => {
       //   formRespond.css({
       //     'display': 'none'
@@ -107,7 +119,7 @@ $(function() {
       //   submitButton.prop('disabled', false); 
       // }, 5000);
    
-      console.log('Не удалось выполнить запрос по указанному в скрипте пути');
+      // console.log('Не удалось выполнить запрос по указанному в скрипте пути');
     }); 
   });
   }(jQuery));

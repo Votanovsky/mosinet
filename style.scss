@@ -1972,6 +1972,26 @@ body {
     
 }
 
+.load-anim {
+    display: none;
+    width: 72px;
+    height: 72px;
+    overflow: visible;
+    padding-top: 30px;
+    margin: 0 auto 20px auto;
+    
+    circle {
+        transform-origin: 50px 50px;
+        stroke: $color-purple;
+        animation: spin 1.2s linear infinite;
+    }
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
 // .swiper-slide {
 //     display: none;
 // }
