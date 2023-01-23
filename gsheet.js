@@ -6,7 +6,7 @@ $(function() {
       let appLink = "https://script.google.com/macros/s/AKfycby8LDGjGbzooax8v5Ge9una3rLHAEczUo7MpGSZNX7fP5QV-V8ur1XIwJQON35gCLigLw/exec";
    
       // Сообщение при успешной отправке данных
-      let successRespond = 'Заявка отправлена.';
+      let successRespond = 'Заявка принята! Наш менеджер свяжется с вами в ближайшее время.';
    
       // Сообщение при ошибке в отправке данных
       let errorRespond = 'Не удалось отправить заявку.';

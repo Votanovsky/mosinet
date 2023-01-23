@@ -1,6 +1,6 @@
 .rate_wrapper {
     padding: 120px 30px 80px;
-    background: $color-purple;
+    background: $color-white;
     display: flex;
     flex-direction: column;
     // border-radius: 0 0 30px 30px;
@@ -11,6 +11,87 @@
         display: flex;
         width: 100%;
         margin-bottom: 120px;
+        .col_1 {
+            &--red {
+                color: $color-red;
+                background: #fff;
+                border: 1px solid rgba(49, 49, 49, 0.5);
+                @media  (max-width: $breakpoint-md-min) {
+                    border: none;
+                }
+            }
+            &--blue {
+                color: $color-blue;
+                background: #fff;
+                border: 1px solid rgba(49, 49, 49, 0.5);
+                @media  (max-width: $breakpoint-md-min) {
+                    border: none;
+                }
+                
+            }
+            &--yellow {
+                color: $color-yellow;
+                background: #fff;
+                border: 1px solid rgba(49, 49, 49, 0.5);
+                @media  (max-width: $breakpoint-md-min) {
+                    border: none;
+                }
+            }
+        }
+        .col_2 {
+            .info {
+                &--red {
+                    background: $color-white;
+                    border: 1px solid rgba(49,49,49, .5);
+                    color: $color-red;
+                }
+                &--blue {
+                    background: $color-white;
+                    border: 1px solid rgba(49,49,49, .5);
+                    color: $color-blue;
+                }
+                &--yellow {
+                    background: $color-white;
+                    border: 1px solid rgba(49,49,49, .5);
+                    color: $color-yellow;
+                }
+
+                .rates {
+                    .rate {
+                        // border: 1px solid rgba(49,49,49, .5);
+
+                        &--yellow {
+                            background: $color-yellow;
+                            color: $color-white;
+                            svg {
+                                path {
+                                    fill: $color-white;
+                                }
+                            }
+                        }
+                        &--red {
+                            background: $color-red;
+                            color: $color-white;
+                            svg {
+                                path {
+                                    fill: $color-white;
+                                    
+                                }
+                            }
+                        }
+                        &--blue {
+                            background: $color-blue;
+                            color: $color-white;
+                            svg {
+                                path {
+                                    fill: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -26,7 +107,6 @@
         align-items: center;
         width: 20%;
         height: 140px;
-        background: $color-pink;
         margin-right: 15px;
         flex-direction: column;
         border-radius: 20px;
@@ -80,7 +160,7 @@
                 margin-bottom: 0;
             }
             @media  (max-width: $breakpoint-md-min) {
-                padding: 20px 10px 40px 10px;
+                padding: 20px 10px 20px 10px;
                 margin-bottom: 80px;
             }
             .tit {
@@ -102,8 +182,8 @@
                 .rate {
                     width: 33.333%;
                     height: auto;
-                    background: $color-white;
-                    color: $color-purple;
+                    // background: $color-white;
+                    // color: $color-purple;
                     padding: 20px;
                     margin-right: 15px;
                     border-radius: 20px;
@@ -152,9 +232,9 @@
                             svg {
                                 width: 26px;
                                 margin-right: 10px;
-                                path {
-                                    fill: $color-purple;
-                                }
+                                // path {
+                                //     fill: $color-purple;
+                                // }
                                 @media  (max-width: $breakpoint-lg-min) {
                                     margin-right: 7px;
                                 }
