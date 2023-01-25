@@ -15,11 +15,11 @@ li {
 // colors: 
 $color-white: #fff;
 $color-black: #2B2B2B;
-$color-purple: #9353E3;
+$color-purple: #8146d3;
 $color-pink: #AD6FFB;
 $color-red: #E43931;
-$color-blue: #5346E4;
-$color-yellow: #F8B748;
+$color-blue: #7700FF;
+$color-yellow: #FEC901;
 // ===/VARIABLES===
 
 // === Adaptive breakpoints ===
@@ -1858,6 +1858,9 @@ body {
     // bottom: 0;
     // width: 100%;
     // z-index: -1;
+    &--rate {
+        background: $color-purple;
+    }
     @media  (max-width: $breakpoint-sm-min) {
         padding: 40px 15px 20px;
     }
