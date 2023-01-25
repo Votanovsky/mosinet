@@ -1638,10 +1638,10 @@ body {
   padding: 0;
 }
 .section_four .rate_wr .rate-color--blue {
-  color: #7700FF;
+  color: #5d00ff;
 }
 .section_four .rate_wr .rate-color--blue svg path {
-  fill: #7700FF;
+  fill: #5d00ff;
 }
 .section_four .rate_wr .rate-color--red {
   color: #E43931;
@@ -1663,7 +1663,7 @@ body {
   height: auto;
 }
 .section_four .rate_wr .rate-color .color--blue {
-  background: #7700FF;
+  background: #5d00ff;
 }
 .section_four .rate_wr .rate-color .color--red {
   background: #E43931;
@@ -1796,7 +1796,7 @@ body {
   background: #fff;
 }
 .section_five .provider_wr .nav .name--active--blue {
-  color: #7700FF;
+  color: #5d00ff;
   background: #fff;
 }
 .section_five .provider_wr .nav .name--active--yellow {
@@ -1856,7 +1856,7 @@ body {
 }
 .section_five .provider_wr .content .circle--blue {
   background: #fff;
-  color: #7700FF;
+  color: #5d00ff;
 }
 @media (max-width: 1200px) {
   .section_five .provider_wr .content .circle {
@@ -2457,5 +2457,30 @@ body {
 @media (max-width: 576px) {
   .elegy {
     padding: 15px 15px;
+  }
+}
+
+.load-anim {
+  display: none;
+  width: 72px;
+  height: 72px;
+  overflow: visible;
+  padding-top: 30px;
+  margin: 0 auto 20px auto;
+}
+.load-anim circle {
+  transform-origin: 50px 50px;
+  stroke: #8146d3;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=style.min.css.map */
