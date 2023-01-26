@@ -1217,6 +1217,7 @@ body {
                     font-family: 'Rubik-SemiBold';
                     font-size: 18px;
                     margin-bottom: 40px;
+                    
                     @media  (max-width: $breakpoint-sm-min) {
                         font-size: 16px;
                         margin-bottom: 20px;
@@ -1225,8 +1226,8 @@ body {
                 .option_it {
                     margin-bottom: 30px;
                     .option_name {
-                        font-family: 'Rubik-Regular';
-                        font-size: 28px;
+                        font-family: 'Rubik-SemiBold';
+                        font-size: 22px;
                         margin-bottom: 20px;
                         @media  (max-width: $breakpoint-lg-min) {
                             font-size: 22px;
@@ -1239,8 +1240,8 @@ body {
                     .option {
                         display: flex;
                         align-items: center;
-                        font-family: 'Rubik-Light';
-                        font-size: 28px;
+                        font-family: 'Rubik-Regular';
+                        font-size: 18px;
                         margin-bottom: 20px;
                         @media  (max-width: $breakpoint-lg-min) {
                             font-size: 22px;
@@ -1266,47 +1267,49 @@ body {
             .rate-color {
                 overflow: hidden;
                 padding: 0;
-                &--blue {
-                    color: $color-blue;
-                    svg {
-                        path {
-                            fill: $color-blue;
-                        }
-                    }
-                }
-                &--red {
-                    // background: $color-red;
-                    color: $color-red;
-                    svg {
-                        path {
-                            fill: $color-red;
-                        }
-                    }
-                }
-                &--yellow {
-                    // background: $color-red;
-                    color: $color-yellow;
-                    svg {
-                        path {
-                            fill: $color-yellow;
-                        }
-                    }
-                }
+                color: #626c77;
+                // &--blue {
+                //     color: $color-blue;
+                //     svg {
+                //         path {
+                //             fill: $color-blue;
+                //         }
+                //     }
+                // }
+                // &--red {
+                //     // background: $color-red;
+                //     color: $color-red;
+                //     svg {
+                //         path {
+                //             fill: $color-red;
+                //         }
+                //     }
+                // }
+                // &--yellow {
+                //     // background: $color-red;
+                //     color: $color-yellow;
+                //     svg {
+                //         path {
+                //             fill: $color-yellow;
+                //         }
+                //     }
+                // }
                 .option_it {
-                    padding: 0 25px 0;
+                    padding: 20px 25px 0;
                 }
                 .color {
                     width: 100%;
-                    height: auto;
-                    &--blue {
-                        background: $color-blue;
-                    }
-                    &--red {
-                        background: $color-red;
-                    }
-                    &--yellow {
-                        background: $color-yellow;
-                    }
+                    height: 140px;
+                    border-bottom: 1px solid $color-black;
+                    // &--blue {
+                    //     background: $color-blue;
+                    // }
+                    // &--red {
+                    //     background: $color-red;
+                    // }
+                    // &--yellow {
+                    //     background: $color-yellow;
+                    // }
                     .company {
                         font-family: 'Rubik-SemiBold';
                         font-size: 52px;
@@ -1319,12 +1322,16 @@ body {
                             font-size: 20px;
                             margin-bottom: 10px;
                         }
+                        img {
+                            width: 80%;
+                            height: auto;
+                        }
                     }
                     .name {
                         font-family: 'Rubik-SemiBold';
                         font-size: 18px;
-                        margin-bottom: 40px;
-                        color: #fff;
+                        // margin-bottom: 40px;
+                        color: #626c77;
                         padding: 0 25px 20px;
                         @media  (max-width: $breakpoint-sm-min) {
                             font-size: 16px;

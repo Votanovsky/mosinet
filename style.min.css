@@ -1588,8 +1588,8 @@ body {
   margin-bottom: 30px;
 }
 .section_four .rate_wr .rate .option_it .option_name {
-  font-family: "Rubik-Regular";
-  font-size: 28px;
+  font-family: "Rubik-SemiBold";
+  font-size: 22px;
   margin-bottom: 20px;
 }
 @media (max-width: 992px) {
@@ -1606,8 +1606,8 @@ body {
 .section_four .rate_wr .rate .option_it .option {
   display: flex;
   align-items: center;
-  font-family: "Rubik-Light";
-  font-size: 28px;
+  font-family: "Rubik-Regular";
+  font-size: 18px;
   margin-bottom: 20px;
 }
 @media (max-width: 992px) {
@@ -1636,40 +1636,15 @@ body {
 .section_four .rate_wr .rate-color {
   overflow: hidden;
   padding: 0;
-}
-.section_four .rate_wr .rate-color--blue {
-  color: #5d00ff;
-}
-.section_four .rate_wr .rate-color--blue svg path {
-  fill: #5d00ff;
-}
-.section_four .rate_wr .rate-color--red {
-  color: #E43931;
-}
-.section_four .rate_wr .rate-color--red svg path {
-  fill: #E43931;
-}
-.section_four .rate_wr .rate-color--yellow {
-  color: #FEC901;
-}
-.section_four .rate_wr .rate-color--yellow svg path {
-  fill: #FEC901;
+  color: #626c77;
 }
 .section_four .rate_wr .rate-color .option_it {
-  padding: 0 25px 0;
+  padding: 20px 25px 0;
 }
 .section_four .rate_wr .rate-color .color {
   width: 100%;
-  height: auto;
-}
-.section_four .rate_wr .rate-color .color--blue {
-  background: #5d00ff;
-}
-.section_four .rate_wr .rate-color .color--red {
-  background: #E43931;
-}
-.section_four .rate_wr .rate-color .color--yellow {
-  background: #FEC901;
+  height: 140px;
+  border-bottom: 1px solid #2B2B2B;
 }
 .section_four .rate_wr .rate-color .color .company {
   font-family: "Rubik-SemiBold";
@@ -1688,11 +1663,14 @@ body {
     margin-bottom: 10px;
   }
 }
+.section_four .rate_wr .rate-color .color .company img {
+  width: 80%;
+  height: auto;
+}
 .section_four .rate_wr .rate-color .color .name {
   font-family: "Rubik-SemiBold";
   font-size: 18px;
-  margin-bottom: 40px;
-  color: #fff;
+  color: #626c77;
   padding: 0 25px 20px;
 }
 @media (max-width: 576px) {
