@@ -430,6 +430,29 @@ li {
     margin-top: 18px;
   }
 }
+.rates_wr .rates_tabs-cont .line .row .rate .content .option_it .price_wr {
+  display: flex;
+  align-items: center;
+}
+.rates_wr .rates_tabs-cont .line .row .rate .content .option_it .price_wr s {
+  display: block;
+  margin-top: 18px;
+  display: inline-block;
+  color: #626c77;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Rubik-SemiBold";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+@media (max-width: 576px) {
+  .rates_wr .rates_tabs-cont .line .row .rate .content .option_it .price_wr s {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+}
 
 body {
   font-family: "Rubik-Regular", sans-serif;
@@ -1526,6 +1549,7 @@ body {
   padding: 20px 25px;
   border-radius: 30px;
   margin-right: 30px;
+  position: relative;
 }
 @media (max-width: 992px) {
   .section_four .rate_wr .rate {
@@ -1535,7 +1559,7 @@ body {
 }
 @media (max-width: 576px) {
   .section_four .rate_wr .rate {
-    width: 290px;
+    width: 305px;
   }
 }
 .section_four .rate_wr .rate svg path {
@@ -1583,8 +1607,42 @@ body {
     margin-bottom: 20px;
   }
 }
+.section_four .rate_wr .rate .price {
+  margin-top: 10px;
+  font-family: "Furore";
+  font-size: 18px;
+  text-transform: lowercase;
+  display: inline-block;
+  margin: 20px 25px;
+}
+@media (max-width: 992px) {
+  .section_four .rate_wr .rate .price {
+    font-size: 16px;
+    margin: 0 25px 38px;
+  }
+}
+.section_four .rate_wr .rate .first_m {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #E43931;
+  background: #fff;
+  font-family: "Rubik-SemiBold";
+  font-size: 14px;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 0 30px 0;
+}
+@media (max-width: 992px) {
+  .section_four .rate_wr .rate .first_m {
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+}
 .section_four .rate_wr .rate .option_it {
-  margin-bottom: 30px;
+  padding: 20px 25px;
 }
 .section_four .rate_wr .rate .option_it .option_name {
   font-family: "Rubik-SemiBold";
@@ -1609,6 +1667,9 @@ body {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.section_four .rate_wr .rate .option_it .option:last-child {
+  margin-bottom: 0;
+}
 @media (max-width: 992px) {
   .section_four .rate_wr .rate .option_it .option {
     font-size: 22px;
@@ -1616,6 +1677,7 @@ body {
 }
 @media (max-width: 576px) {
   .section_four .rate_wr .rate .option_it .option {
+    margin-bottom: 16px;
     font-size: 16px;
   }
 }
@@ -1640,9 +1702,6 @@ body {
 }
 .section_four .rate_wr .rate-color svg path {
   fill: #fff;
-}
-.section_four .rate_wr .rate-color .option_it {
-  padding: 20px 25px 0;
 }
 .section_four .rate_wr .rate-color .color {
   width: 100%;

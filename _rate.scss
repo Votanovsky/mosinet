@@ -360,6 +360,29 @@
                                     margin-top: 18px;
                                 }
                             }
+                            .price_wr {
+                                display: flex;
+                                align-items: center;
+                                s {
+                                    display: block;
+                                    // margin-left: 10px;
+                                    margin-top: 18px;
+                                    display: inline-block;
+                                    color: #626c77;
+                                    // border: 1px solid #E30611;
+                                    background: #fff;
+                                    padding: 12px 16px;
+                                    border-radius: 20px;
+                                    text-align: center;
+                                    font-family: 'Rubik-SemiBold';
+                                    font-size: 18px;
+                                    text-transform: uppercase;
+                                    @media  (max-width: $breakpoint-sm-min) {
+                                        font-size: 16px;
+                                        margin-top: 18px;
+                                    }
+                                }
+                            }
                         }
                     }
                     
