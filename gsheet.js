@@ -13,9 +13,7 @@ $(function() {
    
       // Id текущей формы
       let form = $('#' + $(this).attr('id'))[0];
-      console.log(form);
       let formRespond = $(this).parent().find('.modal_t') || $('#modal2').find('.modal_t');
-      console.log(formRespond);
       let formLoader = $(this).parent().find('.load-anim') || $('#modal2').find('.load-anim');
 
       // h2 с ответом формы
@@ -42,9 +40,6 @@ $(function() {
         processData: false,
         contentType: false,
         beforeSend: function(){
-   
-        // Показываем прелоадер
-        // preloader.css('opacity', '1');
    
         // Делаем неактивной кнопку отправки
         submitButton.prop('disabled', true);

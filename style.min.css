@@ -1576,7 +1576,6 @@ body {
 .section_four .rate_wr .rate .name {
   font-family: "Rubik-SemiBold";
   font-size: 18px;
-  margin-bottom: 40px;
 }
 @media (max-width: 576px) {
   .section_four .rate_wr .rate .name {
@@ -1636,7 +1635,11 @@ body {
 .section_four .rate_wr .rate-color {
   overflow: hidden;
   padding: 0;
-  color: #626c77;
+  color: #fff;
+  background: #AD6FFB;
+}
+.section_four .rate_wr .rate-color svg path {
+  fill: #fff;
 }
 .section_four .rate_wr .rate-color .option_it {
   padding: 20px 25px 0;
@@ -1644,13 +1647,61 @@ body {
 .section_four .rate_wr .rate-color .color {
   width: 100%;
   height: 140px;
-  border-bottom: 1px solid #2B2B2B;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .section_four .rate_wr .rate-color .color {
+    height: 90px;
+  }
+}
+.section_four .rate_wr .rate-color .color--blue img {
+  width: auto;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .section_four .rate_wr .rate-color .color--blue img {
+    height: 35px;
+    padding-top: 10px;
+  }
+}
+.section_four .rate_wr .rate-color .color--red img {
+  width: auto;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .section_four .rate_wr .rate-color .color--red img {
+    height: 35px;
+    padding-top: 10px;
+  }
+}
+.section_four .rate_wr .rate-color .color--yellow img {
+  width: 70%;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .section_four .rate_wr .rate-color .color--yellow img {
+    height: 35px;
+    padding-top: 10px;
+  }
 }
 .section_four .rate_wr .rate-color .color .company {
   font-family: "Rubik-SemiBold";
-  font-size: 52px;
   color: #fff;
-  padding: 20px 25px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
 @media (max-width: 992px) {
   .section_four .rate_wr .rate-color .color .company {
@@ -1663,20 +1714,16 @@ body {
     margin-bottom: 10px;
   }
 }
-.section_four .rate_wr .rate-color .color .company img {
-  width: 80%;
-  height: auto;
-}
 .section_four .rate_wr .rate-color .color .name {
   font-family: "Rubik-SemiBold";
-  font-size: 18px;
-  color: #626c77;
-  padding: 0 25px 20px;
+  font-size: 16px;
+  padding: 16px 0;
 }
 @media (max-width: 576px) {
   .section_four .rate_wr .rate-color .color .name {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 10px 0 6px;
   }
 }
 .section_five {
