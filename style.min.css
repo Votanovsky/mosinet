@@ -1017,15 +1017,16 @@ body {
 .section_one .l .tit {
   font-family: "Furore";
   color: #fff;
-  font-size: 54px;
+  font-size: 52px;
   display: flex;
-  display: block;
+  width: 85%;
   line-height: 130%;
   margin-bottom: 27px;
 }
 @media (max-width: 992px) {
   .section_one .l .tit {
     font-size: 46px;
+    width: 100%;
   }
 }
 @media (max-width: 576px) {
@@ -1046,11 +1047,11 @@ body {
 }
 .section_one .l .descr {
   font-family: "Rubik-Regular";
-  font-size: 26px;
+  font-size: 22px;
   color: #fff;
   letter-spacing: -0.01rem;
   margin-bottom: 47px;
-  width: 90%;
+  width: 85%;
 }
 @media (max-width: 1200px) {
   .section_one .l .descr {
@@ -1271,7 +1272,7 @@ body {
 }
 @media (max-width: 768px) {
   .section_two .services_wr .l {
-    height: 500px !important;
+    height: 360px !important;
     width: 100%;
     z-index: 9;
   }
@@ -1637,8 +1638,8 @@ body {
 }
 @media (max-width: 992px) {
   .section_four .rate_wr .rate .first_m {
-    font-size: 10px;
-    padding: 4px 18px;
+    font-size: 12px;
+    padding: 4px 14px;
   }
 }
 .section_four .rate_wr .rate .option_it {
@@ -1907,7 +1908,7 @@ body {
 }
 @media (max-width: 576px) {
   .section_five .provider_wr .content {
-    padding: 20px 30px 230px;
+    padding: 20px 30px 160px;
     border-radius: 10px;
   }
 }
