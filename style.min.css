@@ -1622,6 +1622,27 @@ body {
     margin: 0 25px 38px;
   }
 }
+.section_four .rate_wr .rate .more {
+  position: absolute;
+  bottom: 40px;
+  right: 15px;
+  color: #fff;
+  background: #8146d3;
+  font-family: "Rubik-SemiBold";
+  font-size: 14px;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 30px;
+}
+@media (max-width: 992px) {
+  .section_four .rate_wr .rate .more {
+    font-size: 12px;
+    bottom: 40px;
+  }
+}
 .section_four .rate_wr .rate .first_m {
   position: absolute;
   bottom: 0;
@@ -1639,7 +1660,7 @@ body {
 @media (max-width: 992px) {
   .section_four .rate_wr .rate .first_m {
     font-size: 12px;
-    padding: 4px 14px;
+    padding: 8px 14px;
   }
 }
 .section_four .rate_wr .rate .option_it {
