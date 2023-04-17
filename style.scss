@@ -1120,6 +1120,9 @@ body {
         // overflow: hidden;
         // padding-right: 40px;
         // padding-left: 30px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
         .title {
             font-family: 'Furore';
             font-size: 54px;
@@ -1449,6 +1452,38 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        .all_rates {
+            margin-top: 60px;
+            font-family: "Rubik-Medium";
+            // text-transform: uppercase;
+            color: $color-white;
+            font-size: 26px;
+            background: $color-red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin-left: auto;
+            // margin-right: auto;
+            margin-left: 30px;
+            width: 400px;
+            height: 65px;
+            border-radius: 30px;
+            transition: .35s ease-in-out;
+            &:hover {
+                transition: .35s ease-in-out;
+                color: $color-red;
+                background: $color-white;
+                cursor: pointer;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-left: 15px;
+                font-size: 24px;
+                width: 305px;
+                height: 55px;
+                margin-top: 30px;
             }
         }
     }

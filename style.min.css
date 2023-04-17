@@ -501,21 +501,11 @@ body {
   border-radius: 6px;
   background: #fff;
   transition: 0.5s;
-  -webkit-animation: progressBullet 9.5s linear infinite;
-          animation: progressBullet 9.5s linear infinite;
+  animation: progressBullet 9.5s linear infinite;
 }
 @media (max-width: 576px) {
   .swiper-pagination-bullet-active {
     width: 96px;
-  }
-}
-
-@-webkit-keyframes progressBullet {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }
 
@@ -737,7 +727,6 @@ body {
   transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   z-index: 20;
@@ -1293,7 +1282,6 @@ body {
 }
 @media (max-width: 768px) {
   .section_two .services_wr .r {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
@@ -1413,14 +1401,10 @@ body {
 }
 .section_two .services_wr .r .slide .dots .dot--active {
   width: 52px;
-  -webkit-animation: moving;
-          animation: moving;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation: moving;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .section_three {
   padding: 170px 100px;
@@ -1807,6 +1791,36 @@ body {
     padding: 10px 0 6px;
   }
 }
+.section_four .all_rates {
+  margin-top: 60px;
+  font-family: "Rubik-Medium";
+  color: #fff;
+  font-size: 26px;
+  background: #E43931;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  width: 400px;
+  height: 65px;
+  border-radius: 30px;
+  transition: 0.35s ease-in-out;
+}
+.section_four .all_rates:hover {
+  transition: 0.35s ease-in-out;
+  color: #E43931;
+  background: #fff;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .section_four .all_rates {
+    margin-left: 15px;
+    font-size: 24px;
+    width: 305px;
+    height: 55px;
+    margin-top: 30px;
+  }
+}
 .section_five {
   padding: 160px 30px 160px;
   background: #8146d3;
@@ -1947,10 +1961,8 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 100%;
-  -webkit-animation: bounce 0.7s normal forwards linear;
-          animation: bounce 0.7s normal forwards linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation: bounce 0.7s normal forwards linear;
+  animation-iteration-count: 1;
 }
 .section_five .provider_wr .content .circle--red {
   background: #fff;
@@ -1981,8 +1993,7 @@ body {
     bottom: 0;
     width: auto;
     height: 100px;
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
     border-top: 6px solid #8146d3;
     flex-direction: row;
     justify-content: space-between;
@@ -2326,10 +2337,6 @@ body {
   color: #fff;
   opacity: 1; /* Firefox */
 }
-.section_seven .form .form_wrapper .form_item:first-child input:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
-  opacity: 1; /* Firefox */
-}
 .section_seven .form .form_wrapper .form_item:first-child input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #fff;
   opacity: 1; /* Firefox */
@@ -2349,10 +2356,6 @@ body {
     color: #AD6FFB;
   }
   .section_seven .form .form_wrapper .form_item:first-child input::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #757575;
-    opacity: 1; /* Firefox */
-  }
-  .section_seven .form .form_wrapper .form_item:first-child input:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #757575;
     opacity: 1; /* Firefox */
   }
@@ -2453,17 +2456,6 @@ body {
   margin-bottom: 20px;
 }
 
-@-webkit-keyframes moving {
-  0% {
-    width: 18px;
-    opacity: 0;
-  }
-  100% {
-    width: 52px;
-    opacity: 1;
-  }
-}
-
 @keyframes moving {
   0% {
     width: 18px;
@@ -2472,23 +2464,6 @@ body {
   100% {
     width: 52px;
     opacity: 1;
-  }
-}
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.02);
-  }
-  50% {
-    transform: scale(0.98);
-  }
-  75% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes bounce {
@@ -2577,13 +2552,7 @@ body {
 .load-anim circle {
   transform-origin: 50px 50px;
   stroke: #8146d3;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
-}
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  animation: spin 1.2s linear infinite;
 }
 @keyframes spin {
   to {
