@@ -1999,6 +1999,92 @@ body {
             }
         }
     }
+
+    &_advantages {
+        padding: 160px 30px 160px; 
+        background: $color-purple;
+        color: $color-white;
+        overflow: hidden;
+        @media  (max-width: $breakpoint-lg-min) {
+            padding: 160px 30px 80px; 
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 120px 15px 60px;
+        }
+        .title_f {
+            font-family: 'Furore';
+            font-size: 54px;
+            margin-bottom: 60px;
+            width: 85%;
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 100%;
+            }
+            @media  (max-width: $breakpoint-md-min) {
+                font-size: 28px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+
+        .advant_wr {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            // justify-content: center;
+            .it {
+                width: calc(85% / 3);
+                margin-right: 60px;
+                margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // text-align: center;
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+                @media  (max-width: $breakpoint-lg-min) {
+                    width: calc(80% / 2);
+                    margin-right: 40px;
+                    &:nth-child(3) {
+                        margin-right: 40px;
+                    }
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: calc(100% / 1);
+                    margin-right: 0;
+                    align-items: center;
+                    text-align: center;
+                    &:nth-child(3) {
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    width: 80px;
+                    margin-bottom: 20px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        width: 40px;
+                        height: auto;
+                        margin-bottom: 10px;
+                    }
+                }
+                .name {
+                    font-family: 'Rubik-SemiBold';
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 18px;
+                    }
+                }
+                .descr {
+                    font-family: 'Rubik-Regular';
+                    font-size: 18px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {

@@ -2409,6 +2409,105 @@ body {
     width: 100%;
   }
 }
+.section_advantages {
+  padding: 160px 30px 160px;
+  background: #8146d3;
+  color: #fff;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .section_advantages {
+    padding: 160px 30px 80px;
+  }
+}
+@media (max-width: 576px) {
+  .section_advantages {
+    padding: 120px 15px 60px;
+  }
+}
+.section_advantages .title_f {
+  font-family: "Furore";
+  font-size: 54px;
+  margin-bottom: 60px;
+  width: 85%;
+}
+@media (max-width: 992px) {
+  .section_advantages .title_f {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .section_advantages .title_f {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+.section_advantages .advant_wr {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.section_advantages .advant_wr .it {
+  width: 28.3333333333%;
+  margin-right: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.section_advantages .advant_wr .it:nth-child(3) {
+  margin-right: 0;
+}
+@media (max-width: 992px) {
+  .section_advantages .advant_wr .it {
+    width: 40%;
+    margin-right: 40px;
+  }
+  .section_advantages .advant_wr .it:nth-child(3) {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .section_advantages .advant_wr .it {
+    width: 100%;
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .section_advantages .advant_wr .it:nth-child(3) {
+    margin-right: 0;
+  }
+}
+.section_advantages .advant_wr .it svg {
+  width: 80px;
+  margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .section_advantages .advant_wr .it svg {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+.section_advantages .advant_wr .it .name {
+  font-family: "Rubik-SemiBold";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+@media (max-width: 576px) {
+  .section_advantages .advant_wr .it .name {
+    font-size: 18px;
+  }
+}
+.section_advantages .advant_wr .it .descr {
+  font-family: "Rubik-Regular";
+  font-size: 18px;
+}
+@media (max-width: 576px) {
+  .section_advantages .advant_wr .it .descr {
+    font-size: 14px;
+  }
+}
 
 .footer {
   background: #AD6FFB;
