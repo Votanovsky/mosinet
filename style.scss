@@ -63,6 +63,7 @@ $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
 
 // Import
 @import 'rate.scss';
+@import 'login.scss';
 
 body {
     font-family: 'Rubik-Regular', sans-serif;
@@ -731,11 +732,6 @@ body {
                 height: 65px;
                 border-radius: 20px;
                 position: relative;
-                z-index: 1;
-                @media  (max-width: $breakpoint-lg-min) {
-                    width: 100%;
-                    display: none;
-                }
                 &::before {
                     content: '';
                     inset: 0;

@@ -86,50 +86,57 @@ if (isOpen) {
     }
 };
 
+var tweens = []
 function loadPage() {
-    var tweens = []
-    barba.init({
-        logLevel: 'debug ',
-        sync: false,
-        
-        transitions: [{
-            async leave() {
-                pageTransition()
-                removeToggle()
-                closeNavbar()
-                await delay(1300)
-            },
+    try {
+        barba.init({
+            logLevel: 'debug ',
+            sync: false,
             
-            async afterLeave() {
-                // barba.data.current.container.remove() // Удаляем содержимое предыдущей страницы вручную, т. к. без этого почему-то некорректно работает
+            transitions: [{
+                async leave() {
+                    pageTransition()
+                    removeToggle()
+                    closeNavbar()
+                    await delay(1300)
+                },
                 
-                // closeNavbar()
-            },
-
-            async beforeEnter() {
-                barba.data.current.container.remove();
-                // document.querySelector('footer').insertAdjacentElement("beforebegin", barba.data.next.container)
-            },
-
-            async enter() {
-                const done = this.async()
-                
-                // barba.data.current.container.remove() // Удаляем содержимое предыдущей страницы вручную, т. к. без этого почему-то некорректно работает
-                // await delay(500)
-                window.scroll(0, 0)
-                loadPage() // Загружаем все скрипты заново
-                
-                done()
-                barba.destroy()
-            },
-
-            // async once(data) {
-            //     contentAnimation()
-            // },
-        }]
-    })
+                async afterLeave() {
+                    // barba.data.current.container.remove() // Удаляем содержимое предыдущей страницы вручную, т. к. без этого почему-то некорректно работает
+                    
+                    // closeNavbar()
+                },
+    
+                async beforeEnter() {
+                    barba.data.current.container.remove();
+                    // document.querySelector('footer').insertAdjacentElement("beforebegin", barba.data.next.container)
+                },
+    
+                async enter() {
+                    const done = this.async()
+                    
+                    // barba.data.current.container.remove() // Удаляем содержимое предыдущей страницы вручную, т. к. без этого почему-то некорректно работает
+                    // await delay(500)
+                    window.scroll(0, 0)
+                    loadPage() // Загружаем все скрипты заново
+                    
+                    done()
+                    barba.destroy()
+                },
+    
+                // async once(data) {
+                //     contentAnimation()
+                // },
+            }]
+        })
+    } catch (error) {
+        console.log(error)
+    }
     
     if (document.title === "MosProvider") {
+        const myText = new SplitType('.tit')
+    }
+    if (document.title === "MosProvider" || document.title === "MosProvider edit") {
         // swiper =========== 
         let swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -194,8 +201,6 @@ function loadPage() {
 
 
         gsap.registerPlugin(ScrollTrigger);
-
-        const myText = new SplitType('.tit')
 
         tweens.push(gsap.to('.word', {
             // height: 'auto',
