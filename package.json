@@ -1,0 +1,23 @@
+{
+  "name": "mosinet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubbleshotgum/mosinet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bubbleshotgum/mosinet/issues"
+  },
+  "homepage": "https://github.com/bubbleshotgum/mosinet#readme",
+  "dependencies": {
+    "alpinejs": "^3.10.5",
+    "gsap": "^3.11.4"
+  }
+}

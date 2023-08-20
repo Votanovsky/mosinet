@@ -1116,6 +1116,9 @@ body {
         // overflow: hidden;
         // padding-right: 40px;
         // padding-left: 30px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
         .title {
             font-family: 'Furore';
             font-size: 54px;
@@ -1445,6 +1448,38 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        .all_rates {
+            margin-top: 60px;
+            font-family: "Rubik-Medium";
+            // text-transform: uppercase;
+            color: $color-white;
+            font-size: 26px;
+            background: $color-red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin-left: auto;
+            // margin-right: auto;
+            margin-left: 30px;
+            width: 400px;
+            height: 65px;
+            border-radius: 30px;
+            transition: .35s ease-in-out;
+            &:hover {
+                transition: .35s ease-in-out;
+                color: $color-red;
+                background: $color-white;
+                cursor: pointer;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-left: 15px;
+                font-size: 24px;
+                width: 305px;
+                height: 55px;
+                margin-top: 30px;
             }
         }
     }
@@ -1955,6 +1990,92 @@ body {
                         @media  (max-width: $breakpoint-lg-min) {
                             width: 100%;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    &_advantages {
+        padding: 160px 30px 160px; 
+        background: $color-purple;
+        color: $color-white;
+        overflow: hidden;
+        @media  (max-width: $breakpoint-lg-min) {
+            padding: 160px 30px 80px; 
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 120px 15px 60px;
+        }
+        .title_f {
+            font-family: 'Furore';
+            font-size: 54px;
+            margin-bottom: 60px;
+            width: 85%;
+            @media  (max-width: $breakpoint-lg-min) {
+                width: 100%;
+            }
+            @media  (max-width: $breakpoint-md-min) {
+                font-size: 28px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+
+        .advant_wr {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            // justify-content: center;
+            .it {
+                width: calc(85% / 3);
+                margin-right: 60px;
+                margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // text-align: center;
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+                @media  (max-width: $breakpoint-lg-min) {
+                    width: calc(80% / 2);
+                    margin-right: 40px;
+                    &:nth-child(3) {
+                        margin-right: 40px;
+                    }
+                }
+                @media  (max-width: $breakpoint-sm-min) {
+                    width: calc(100% / 1);
+                    margin-right: 0;
+                    align-items: center;
+                    text-align: center;
+                    &:nth-child(3) {
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    width: 80px;
+                    margin-bottom: 20px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        width: 40px;
+                        height: auto;
+                        margin-bottom: 10px;
+                    }
+                }
+                .name {
+                    font-family: 'Rubik-SemiBold';
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 18px;
+                    }
+                }
+                .descr {
+                    font-family: 'Rubik-Regular';
+                    font-size: 18px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        font-size: 14px;
                     }
                 }
             }
