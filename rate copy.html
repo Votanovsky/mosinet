@@ -8,16 +8,19 @@
 
     <meta name="description" content="Подключить домашний интернет от популярных интернет провайдеров по Москве и МО! Бесплатное подключение интернета и TV. Ежедневно с 9:00 до 23:00."> 
     
-    <link rel="apple-touch-icon" sizes="180x180" href="media/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="media/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="media/fav/favicon-16x16.png">
-    <link rel="manifest" href="media/fav/site.webmanifest">
-    <link rel="mask-icon" href="media/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/fav/favicon-16x16.png">
+    <link rel="manifest" href="/media/fav/site.webmanifest">
+    <link rel="mask-icon" href="/media/fav/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
 </head>
 <body data-barba="wrapper">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<link rel="stylesheet" href="style.css">
 
  <!-- PAGE TRANSITION ANIMATION -->
  <!-- <div class="loader-overlay one"></div>
@@ -34,7 +37,7 @@
 <div class="all-root-barba" >
 
     <header class="header">
-        <a href="index.html" class="logo"><span>MOS</span>PROVIDER</a>
+        <a href="/index.html" class="logo"><span>MOS</span>PROVIDER</a>
 
         <nav class="nav">
             <ul class="ul">
@@ -42,7 +45,7 @@
                     <a href="tel:84957275009">+7 (495) 727-50-09</a>
                 </li>
                 <li class="li">
-                    <a href="rate.html">Тарифы</a>
+                    <a href="/rate.html">Тарифы</a>
                 </li>
                 <!-- <li class="li">
                     <a href="#prov">Провайдеры</a>
@@ -89,19 +92,19 @@
         <div class="bg_darken"></div>
 
         <div class="rates_tabs-name" >
-            <div class="all" @click.prevent="tab = 'tab4'" :class="{ 'all--active': tab == 'tab4'}">
+            <div class="all" x-on:click.prevent="tab = 'tab4'" :class="{ 'all--active': tab == 'tab4'}">
                 <div>
                     Все провайдеры
                 </div>
             </div>
             <div class="provs">
-                <div class="it it--mtl" @click.prevent="tab = 'tab1'" :class="{ 'it--mtl--active': tab == 'tab1'}">
+                <div class="it it--mtl" x-on:click.prevent="tab = 'tab1'" :class="{ 'it--mtl--active': tab == 'tab1'}">
                     <img src="media/mtl.png" alt="">
                 </div>
-                <div class="it it--bel" @click.prevent="tab = 'tab2'" :class="{ 'it--bel--active': tab == 'tab2'}">
+                <div class="it it--bel" x-on:click.prevent="tab = 'tab2'" :class="{ 'it--bel--active': tab == 'tab2'}">
                     <img src="media/bel.png" alt="">
                 </div>
-                <div class="it it--rol" @click.prevent="tab = 'tab3'" :class="{ 'it--rol--active': tab == 'tab3'}">
+                <div class="it it--rol" x-on:click.prevent="tab = 'tab3'" :class="{ 'it--rol--active': tab == 'tab3'}">
                     <img src="media/rol.png" alt="">
                 </div>
             </div>
@@ -2868,11 +2871,6 @@
 
 <script src="https://unpkg.com/split-type"></script>
 
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <script src="https://unpkg.com/@barba/core"></script>
@@ -2882,7 +2880,6 @@ href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script defer src="gsheet.js"></script>
 
-<link rel="stylesheet" href="style.css">
 
 </body>
 </html>

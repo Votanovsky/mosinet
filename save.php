@@ -1,5 +1,4 @@
 <?php
-include_once('format.php');
 // echo "saving";
 header("Content-Type:application/json");
 $data = json_decode(file_get_contents("php://input"), true);
@@ -60,7 +59,7 @@ if (isset($data['html']) && isset($data['page'])) {
     // var_dump($tidy);
     // Save to file
     // file_put_contents($data['page'].'-new.html', $tidy->value);
-    file_put_contents($data['page'].'.html', $new_file);
+    echo 'Written: '.file_put_contents($data['page'].'.html', $new_file);
     // echo 'Wrote: ' . $doc->saveHTMLFile($data['page'].'-new.html') . ' bytes';
     // var_dump($new_body);
     // var_dump($new_body->getElementsByTagName('body')[0]);
