@@ -732,6 +732,11 @@ body {
                 height: 65px;
                 border-radius: 20px;
                 position: relative;
+                z-index: 1;
+                @media  (max-width: $breakpoint-lg-min) {
+                    width: 100%;
+                    display: none;
+                }
                 &::before {
                     content: '';
                     inset: 0;
