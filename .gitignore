@@ -1,2 +1,8 @@
 node_modules
 .vscode
+.well-known/
+certs/
+git-pull.sh
+robots.txt
+yandex_67dfc41765f3f238.html
+yandex_73cfdb13d8619876.html

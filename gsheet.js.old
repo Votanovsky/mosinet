@@ -1,12 +1,15 @@
 $(function() {
     $(".form").submit(function (event) {
       event.preventDefault();
-      
+
+      // Ссылка, которую получили на этапе публикации приложения
+      let appLink = "https://script.google.com/macros/s/AKfycbyfMzSgU7hZQ1GA7rOw7r9nzgT8dciBNwgbCG1B2fD4Ehw-SgGtlGIBzkKKI9DN6hsOuQ/exec";
+
       // Сообщение при успешной отправке данных
-      let successRespond = 'Заявка принята! Наш менеджер свяжется с вами в ближайшее время';
+      let successRespond = 'Заявка принята! Наш менеджер свяжется с вами в ближайшее время.';
    
       // Сообщение при ошибке в отправке данных
-      let errorRespond = 'Не удалось отправить заявку';
+      let errorRespond = 'Не удалось отправить заявку.';
    
       // Id текущей формы
       let form = $('#' + $(this).attr('id'))[0];
@@ -26,17 +29,20 @@ $(function() {
       let submitButton = $(this).parent().find('.modal_t') ? $(this).find('.form-submit') : $('.btn_check');
       // Сообщение, отправляемое на закрытый канал в телеграмме в случае, если пользователь успешно отправляет контактные данные
       let telegramText =(form.id==="form1"?"Клиент ожидает обратной связи!":"Клиент хочет проверить возможность подключения!")+"\n---------------------------------------------"
-      telegramText += lastRateName.length ? `Тариф: ${lastRateName}\n` : '';
       
       // FormData
       let fd = new FormData(form);
       for(const [key,value] of fd.entries())
-        telegramText+=`\n${key}: ${value}`;
-      fd.append('telegramText', telegramText);
-      fd.append('rateName', lastRateName);
-
+        telegramText+=`\n${key}: ${value}` 
+      let
+        telegramBotAPIKey = '5921150643:AAFRXdcLnRz_eJRwdlnrdK5BlzU67i6lnLA',
+        telegramAPIURL = `https://api.telegram.org/bot${telegramBotAPIKey}/sendMessage`
+        telegramBotRequestBody = {
+          chat_id:-1001874196244,
+          text:telegramText
+        }
       $.ajax({
-        url: '/submit.php',
+        url: appLink,
         type: "POST",
         data: fd,
         processData: false,
@@ -57,27 +63,32 @@ $(function() {
       },
    
     }).done(function(res, textStatus, jqXHR) {
-      if (jqXHR.readyState === 4 && jqXHR.status === 200) {
-        formRespond.html(successRespond);
-        formRespond[0].style.color = '';
-        
-        formLoader[0].style.display = 'none';
-        formRespond[0].style.display = 'block';
+   
+      if(jqXHR.readyState === 4 && jqXHR.status === 200) {
+      formRespond.html(successRespond);
+      
+      formLoader[0].style.display = 'none';
+      formRespond[0].style.display = 'block';
 
-        // Прячем прелоадер
-        //   preloader.css('opacity', '0');
-    
-        // Выводим ответ формы.
-        //   formRespond.html(successRespond).css('color', '#37b599');
-        
-        // Возвращаем активность кнопке отправки
+      // Прячем прелоадер
+    //   preloader.css('opacity', '0');
+   
+      // Выводим ответ формы.
+    //   formRespond.html(successRespond).css('color', '#37b599');
+       
+      // Возвращаем активность кнопке отправки
         submitButton.prop('disabled', false);
    
         // Очищаем поля формы
         form.reset();
-      } 
-      else {
+        fetch(telegramAPIURL,{
+          method:"POST",
+          headers:{'Content-Type':"application/json"},
+          body:JSON.stringify(telegramBotRequestBody)
+        })
+      } else {
         formRespond.html(errorRespond);
+
         
         formLoader[0].style.display = 'none';
         formRespond[0].style.display = 'block';
@@ -92,20 +103,14 @@ $(function() {
         //     'display': 'none'
         //   });
    
-        submitButton.prop('disabled', false);
+        //   submitButton.prop('disabled', false);
         // }, 5000);
    
         // console.log('Гугл не ответил статусом 200');
       }
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-      //   preloader.css('opacity', '0');
-      if (jqXHR.status === 429) {
-        formRespond.html("Вы отправили слишком много запросов.<br>Пожалуйста, попробуйте завтра или свяжитесь с нами по телефону");
-      }
-      else {
-        formRespond.html(errorRespond);
-      }
-      formRespond[0].style.color = '#E43931';
+    }).fail(function(res, textStatus, jqXHR) {
+    //   preloader.css('opacity', '0');
+      formRespond.html(errorRespond);
       
       formLoader[0].style.display = 'none';
       formRespond[0].style.display = 'block';
@@ -118,7 +123,7 @@ $(function() {
       //     'display': 'none'
       //   });
 
-      submitButton.prop('disabled', false); 
+      //   submitButton.prop('disabled', false); 
       // }, 5000);
    
       // console.log('Не удалось выполнить запрос по указанному в скрипте пути');
