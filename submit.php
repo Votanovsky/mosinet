@@ -29,7 +29,8 @@
 
     // GOOGLE SHEETS
 
-    $req_url = 'https://script.google.com/macros/s/AKfycby38S2GxEIonhU9wpM4NX-qg02l64PShI5eGinR8zwbU4U6c1hl8uUb5mav0yO53BsWhg/exec';
+    // $req_url = 'https://script.google.com/macros/s/AKfycby38S2GxEIonhU9wpM4NX-qg02l64PShI5eGinR8zwbU4U6c1hl8uUb5mav0yO53BsWhg/exec';
+    $req_url = 'https://script.google.com/macros/s/AKfycbxKsrWkixOejjdAcBABpufn1Ls7zHPgVQvIAa6R9xgYyFdiCLm4XAnXnpJT_WAOO__uuw/exec';
     $body = ['name' => $form_name, 'phone' => $form_phone, 'ip' => $user_ip];
     if (isset($form_street)) {
         $body['street'] = $form_street;
