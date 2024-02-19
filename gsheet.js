@@ -26,14 +26,14 @@ $(function() {
       let submitButton = $(this).parent().find('.modal_t') ? $(this).find('.form-submit') : $('.btn_check');
       // Сообщение, отправляемое на закрытый канал в телеграмме в случае, если пользователь успешно отправляет контактные данные
       let telegramText =(form.id==="form1"?"Клиент ожидает обратной связи!":"Клиент хочет проверить возможность подключения!")+"\n---------------------------------------------"
-      telegramText += lastRateName.length ? `Тариф: ${lastRateName}\n` : '';
+      telegramText += window.lastRateName.length ? `Тариф: ${window.lastRateName}\n` : '';
       
       // FormData
       let fd = new FormData(form);
       for(const [key,value] of fd.entries())
         telegramText+=`\n${key}: ${value}`;
       fd.append('telegramText', telegramText);
-      fd.append('rateName', lastRateName);
+      fd.append('rateName', window.lastRateName);
 
       $.ajax({
         url: '/submit.php',

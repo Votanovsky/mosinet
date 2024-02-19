@@ -1,15 +1,17 @@
-const ratePrices = document.querySelectorAll('.rate .price')
-const rateNames = [...ratePrices].map(p => p.parentElement.parentElement.parentElement.querySelector('.name').innerText)
-const rateModalText = document.querySelector('.modal .modal_t')
-let lastRateName = ''
+function ratesInit() {
+    let ratePrices = document.querySelectorAll('.rate .price');
+    let rateNames = [...ratePrices].map(p => p.parentElement.parentElement.parentElement.querySelector('.name').innerText);
+    let rateModalText = document.querySelector('.modal .modal_t');
+    window.lastRateName = '';
 
-for (let [i, price] of ratePrices.entries()) {
-    price.addEventListener('click', () => {
-        setlastRateName(rateNames[i])
-    })
-}
+    for (let [i, price] of ratePrices.entries()) {
+        price.addEventListener('click', () => {
+            setlastRateName(rateNames[i]);
+        })
+    }
 
-function setlastRateName(name) {
-    lastRateName = name
-    rateModalText.innerHTML = "Оставьте заявку на тариф<br/><strong>" + lastRateName + "</strong><br/>и наш менеджер свяжется с вами"
+    function setlastRateName(name) {
+        window.lastRateName = name;
+        rateModalText.innerHTML = "Оставьте заявку на тариф<br/><strong>" + window.lastRateName + "</strong><br/>и наш менеджер свяжется с вами";
+    }
 }

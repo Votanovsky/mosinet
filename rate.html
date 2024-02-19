@@ -90,10 +90,10 @@ webvisor:true
         </ul>
       </div>
       <div id="bg-circle"></div>
-      <main data-barba="container" x-data="{ tab: 'tab1', openModal1: false, rateName: '' }" class="rates_wr">
-        <div id="modal1" x-bind:class="{ 'flex': openModal1 }" x-bind:data-name="{ rateName }" class="modal_wr">
+      <main data-barba="container" x-data="{ tab: 'tab1', openModalRates: false, rateName: '' }" class="rates_wr">
+        <div id="modalRates" x-bind:class="{ 'flex': openModalRates }" x-bind:data-name="{ rateName }" class="modal_wr">
           <div class="modal">
-            <div x-on:click="openModal1 = false" class="close">
+            <div x-on:click="openModalRates = false" class="close">
               <div class="close_i"></div>
               <div class="close_i"></div>
             </div>
@@ -222,7 +222,7 @@ webvisor:true
                       <span>100 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">700₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">700₽ / месяц
                                 </div>
                       <s id="i9wbgy6">850₽ / месяц</s>
                     </div>
@@ -311,7 +311,7 @@ webvisor:true
                       <span>Безлимитные мессенджеры</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">990₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">990₽ / месяц
                                 </div>
                       <s id="ibvgrrz">1250₽ / месяц</s>
                     </div>
@@ -396,7 +396,7 @@ webvisor:true
                   </div>
                   <div class="option_it">
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">390₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">390₽ / месяц
                                 </div>
                       <s id="i7rmogu">850₽ / месяц</s>
                     </div>
@@ -443,7 +443,7 @@ webvisor:true
                       <span id="iqlx9df">Мобильный интернет 30 гб</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     500₽ / месяц
                                 </div>
                     </div>
@@ -482,7 +482,7 @@ webvisor:true
                       <span id="i33i3mo">Мобильный интернет 30 гб</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                       <s id="icomyq">650₽ / месяц</s>
@@ -522,7 +522,7 @@ webvisor:true
                       <span id="i4jhxeg">Мобильный интернет 30 гб</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     990₽ / месяц
                                 </div>
                     </div>
@@ -615,7 +615,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">850₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">850₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -698,7 +698,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">950₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">950₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -781,7 +781,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">1100₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">1100₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -822,7 +822,7 @@ webvisor:true
                       <span id="i7cvuq">214 TV каналов</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">650₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">650₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -856,7 +856,7 @@ webvisor:true
                       <span id="icxwio">214 TV каналов</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         650₽ / месяц
                                     </div>
                       <s id="i005gn">750₽ / месяц</s>
@@ -911,7 +911,7 @@ webvisor:true
                     </div>
                     <div class="option"></div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">950₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">950₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -944,7 +944,7 @@ webvisor:true
                       <span>Интернет 100 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">500₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">500₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -970,7 +970,7 @@ webvisor:true
                       <span id="iz7i2w">Интернет 500 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                     </div>
@@ -1015,7 +1015,7 @@ webvisor:true
                       <span id="iwa5e1i">Приоритетная поддержка</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">800₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">800₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -1098,7 +1098,7 @@ webvisor:true
                       <span>500 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     780₽ / месяц
                                 </div>
                     </div>
@@ -1181,7 +1181,7 @@ webvisor:true
                       <span>300 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     990₽ / месяц
                                 </div>
                     </div>
@@ -1264,7 +1264,7 @@ webvisor:true
                       <span>500 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">1400₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">1400₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -1305,7 +1305,7 @@ webvisor:true
                       <span id="i5yithn">140 TV канал </span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     650₽ / месяц
                                 </div>
                     </div>
@@ -1340,7 +1340,7 @@ webvisor:true
                       <span id="ivrup2s">191 TV канал + WINK</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1150₽ / месяц
                                 </div>
                     </div>
@@ -1374,7 +1374,7 @@ webvisor:true
                       <span id="i4c51gc">Интернет 500 Мбит/c </span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                     </div>
@@ -1401,7 +1401,7 @@ webvisor:true
                       <span id="i2zjakf">Интернет 890 Мбит/c </span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">950₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">950₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -1493,7 +1493,7 @@ webvisor:true
                       <span>100 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     850₽ / месяц
                                 </div>
                     </div>
@@ -1582,7 +1582,7 @@ webvisor:true
                       <span>Безлимитные мессенджеры</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">1250₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">1250₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -1701,7 +1701,7 @@ webvisor:true
                       <span>Выезд группы реагирования</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1990₽ / месяц
                                 </div>
                     </div>
@@ -1790,7 +1790,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     990₽ / месяц
                                 </div>
                     </div>
@@ -1874,7 +1874,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1200₽ / месяц
                                 </div>
                     </div>
@@ -1958,7 +1958,7 @@ webvisor:true
                       <span>+5 номера к тарифу</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1400₽ / месяц
                                 </div>
                     </div>
@@ -2046,7 +2046,7 @@ webvisor:true
                       <span>500 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     780₽ / месяц
                                 </div>
                     </div>
@@ -2138,7 +2138,7 @@ webvisor:true
                       <span>До 5 SIM</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     990₽ / месяц
                                 </div>
                     </div>
@@ -2221,7 +2221,7 @@ webvisor:true
                       <span>500 SMS</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1200₽ / месяц
                                 </div>
                     </div>
@@ -2264,7 +2264,7 @@ webvisor:true
                       <span>226 TV каналов IPTV</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     650₽ / месяц
                                 </div>
                     </div>
@@ -2299,7 +2299,7 @@ webvisor:true
                       <span>226 TV каналов IPTV</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         650₽ / месяц
                                     </div>
                       <s>800₽ / месяц</s>
@@ -2335,7 +2335,7 @@ webvisor:true
                       <span>226 TV каналов IPTV</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1100₽ / месяц
                                 </div>
                     </div>
@@ -2375,7 +2375,7 @@ webvisor:true
                       <span>215 TV каналов</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">750₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">750₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -2409,7 +2409,7 @@ webvisor:true
                       <span>215 TV каналов</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         650₽ / месяц
                                     </div>
                       <s>850₽ / месяц</s>
@@ -2445,7 +2445,7 @@ webvisor:true
                       <span>245 TV каналов</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">750₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">750₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -2484,7 +2484,7 @@ webvisor:true
                       <span>141 TV канал + WINK</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     650₽ / месяц
                                 </div>
                     </div>
@@ -2519,7 +2519,7 @@ webvisor:true
                       <span>188 TV канал + WINK</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     1150₽ / месяц
                                 </div>
                     </div>
@@ -2554,7 +2554,7 @@ webvisor:true
                       <span>Интернет 200 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     500₽ / месяц
                                 </div>
                     </div>
@@ -2581,7 +2581,7 @@ webvisor:true
                       <span>Интернет 500 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                       <s>650₽ / месяц</s>
@@ -2609,7 +2609,7 @@ webvisor:true
                       <span>Интернет 1 Гбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                     990₽ / месяц
                                 </div>
                     </div>
@@ -2641,7 +2641,7 @@ webvisor:true
                       <span>Интернет 100 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">600₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">600₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -2667,7 +2667,7 @@ webvisor:true
                       <span>Интернет 300 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                       <s>700₽ / месяц</s>
@@ -2695,7 +2695,7 @@ webvisor:true
                       <span>Интернет 500 Мбит/c</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">600₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">600₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -2726,7 +2726,7 @@ webvisor:true
                       <span>Интернет 500 Мбит/c FTTX</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">
+                      <div class="price" x-on:click="openModalRates = true">
                                         500₽ / месяц
                                     </div>
                     </div>
@@ -2753,7 +2753,7 @@ webvisor:true
                       <span>Интернет 890 Мбит/c FTTX</span>
                     </div>
                     <div class="price_wr">
-                      <div class="price" x-on:click="openModal1 = true">950₽ / месяц
+                      <div class="price" x-on:click="openModalRates = true">950₽ / месяц
                                 </div>
                     </div>
                   </div>
@@ -2787,8 +2787,8 @@ webvisor:true
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer="defer" src="/rate.js"></script>
     <script defer="defer" src="/gsheet.js"></script>
     <script defer="defer" src="/index.js"></script>
-    <script defer="defer" src="/rate.js"></script>
   </body>
 </html>
