@@ -25,8 +25,9 @@ $(function() {
       // Кнопка отправки формы
       let submitButton = $(this).parent().find('.modal_t') ? $(this).find('.form-submit') : $('.btn_check');
       // Сообщение, отправляемое на закрытый канал в телеграмме в случае, если пользователь успешно отправляет контактные данные
-      let telegramText =(form.id==="form1"?"Клиент ожидает обратной связи!":"Клиент хочет проверить возможность подключения!")+"\n---------------------------------------------"
+      let telegramText =(form.id==="form1"?"Клиент ожидает обратной связи!":"Клиент хочет проверить возможность подключения!");
       telegramText += window.lastRateName.length ? `Тариф: ${window.lastRateName}\n` : '';
+      telegramText += "\n---------------------------------------------";
       
       // FormData
       let fd = new FormData(form);

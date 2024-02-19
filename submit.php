@@ -4,7 +4,7 @@
     $form_phone = $_POST['Телефон'];
     $form_street = $_POST['Улица'];
     $form_building = $_POST['Дом'];
-    $rate_name = $_POST['lastRateName'];
+    $rate_name = $_POST['rateName'];
     $user_ip = $_SERVER['REMOTE_ADDR'];
 
     // DATABASE CHECK
