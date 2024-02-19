@@ -356,6 +356,7 @@
                                 font-family: 'Rubik-SemiBold';
                                 font-size: 18px;
                                 text-transform: uppercase;
+                                cursor: pointer;
                                 @media  (max-width: $breakpoint-sm-min) {
                                     font-size: 16px;
                                     margin-top: 18px;

@@ -423,6 +423,7 @@ li {
   font-family: "Rubik-SemiBold";
   font-size: 18px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 @media (max-width: 576px) {
   .rates_wr .rates_tabs-cont .line .row .rate .content .option_it .price {
@@ -2710,4 +2711,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=style.css.map */
+}
