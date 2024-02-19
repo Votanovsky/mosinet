@@ -1,4 +1,4 @@
-$(function() {
+function gsheetInit() {
     $(".form").submit(function (event) {
       event.preventDefault();
       
@@ -125,4 +125,4 @@ $(function() {
       // console.log('Не удалось выполнить запрос по указанному в скрипте пути');
     }); 
   });
-  }(jQuery));
+};

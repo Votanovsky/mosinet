@@ -452,6 +452,7 @@ function loadPage() {
     else if (document.title === "MosProvider Rates") {
         ratesInit();
     }
+    gsheetInit();
 }
 
 loadPage();
