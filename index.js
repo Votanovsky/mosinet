@@ -449,9 +449,7 @@ function loadPage() {
             }))
         }, 0);
     }
-    else if (document.title === "MosProvider Rates") {
-        ratesInit();
-    }
+    ratesInit();
     gsheetInit();
 }
 
