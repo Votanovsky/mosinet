@@ -242,6 +242,9 @@ li {
   display: flex;
   flex-direction: column;
 }
+.rates_wr .rates_tabs-cont--hidden {
+  display: none !important;
+}
 .rates_wr .rates_tabs-cont .line {
   width: 100%;
 }

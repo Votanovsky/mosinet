@@ -449,8 +449,10 @@ function loadPage() {
             }))
         }, 0);
     }
-    ratesInit();
-    gsheetInit();
+    if (!window.location.pathname.includes('edit')) {
+        ratesInit();
+        gsheetInit();
+    }
 }
 
 loadPage();

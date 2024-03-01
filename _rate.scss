@@ -187,7 +187,9 @@
     .rates_tabs-cont {
         display: flex;
         flex-direction: column;
-
+        &--hidden {
+            display: none !important;
+        }
         .line {
             width: 100%;
             &--bel {
