@@ -607,7 +607,7 @@ webvisor:true
                         РОСТЕЛЕКОМ
                     </div>
             </div>
-            <div x-show="tab == 'tab1'" class="content">
+            <div x-bind:class="{ 'content--hidden': tab !== 'tab1'}" class="content">
               <div class="name">Кот пуш</div>
               <div class="descr">
                 <div class="descr_it">
@@ -670,7 +670,7 @@ webvisor:true
                         </p>
               </a>
             </div>
-            <div x-show="tab == 'tab2'" id="ijndef" class="content">
+            <div x-bind:class="{ 'content--hidden': tab !== 'tab2'}" class="content">
               <div class="name">
                         МЫ МТС +
                     </div>
@@ -715,7 +715,7 @@ webvisor:true
                         </p>
               </a>
             </div>
-            <div x-show="tab == 'tab3'" id="ipel7b" class="content">
+            <div x-bind:class="{ 'content--hidden': tab !== 'tab3'}" class="content">
               <div class="name">Игровой 4 в 1</div>
               <div class="descr">
                 <div class="descr_it">

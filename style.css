@@ -2004,6 +2004,9 @@ body {
     border-radius: 10px;
   }
 }
+.section_five .provider_wr .content--hidden {
+  display: none !important;
+}
 .section_five .provider_wr .content .circle {
   border: 10px solid #8146d3;
   cursor: pointer;

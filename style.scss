@@ -1597,6 +1597,9 @@ body {
                     padding: 20px 30px 160px;
                     border-radius: 10px;
                 }
+                &--hidden {
+                    display: none !important;
+                }
                 .circle {
                     border: 10px solid $color-purple;
                     cursor: pointer;

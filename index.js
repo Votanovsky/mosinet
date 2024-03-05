@@ -453,6 +453,11 @@ function loadPage() {
         ratesInit();
         gsheetInit();
     }
+    else {
+        for (let t of tweens) {
+            t.play()
+        }
+    }
 }
 
 loadPage();
