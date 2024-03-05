@@ -55,7 +55,8 @@ if (isset($data['html']) && isset($data['page'])) {
     $new_file = str_replace('swiper-pagination-vertical', 'swiper-pagination-horizontal', $new_file);
     $new_file = str_replace('<span aria-live="assertive" aria-atomic="true" class="swiper-notification"></span>', '', $new_file);
     $new_file = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $new_file);
-    // echo $new_file;
+    $new_file = preg_replace('/<!\[CDATA\[([\s\S\n\t]*)\]\]>/mU', '$1', $new_file);
+    echo $new_file;
     // $tidy = new tidy;
     // $tidy->parseString($new_file, $tidy_config, 'utf8');
     // $tidy->cleanRepair();

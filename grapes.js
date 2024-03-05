@@ -41,7 +41,9 @@ function grapesjsInit() {
           onStore: (data, editor) => {
             const dom = {
               'page': `${window.location.pathname.slice(1,).split('-')[0]}`,
-              'html': editor.getHtml()
+              'html': editor.getHtml({
+                cleanId: true
+              })
             };
             fetch('/save.php', {
               method: 'POST',
@@ -317,7 +319,9 @@ function grapesjsInit() {
     run(editor, sender) {
       const dom = {
         'page': `${window.location.pathname.slice(1,).split('-')[0]}`,
-        'html': editor.getHtml()
+        'html': editor.getHtml({
+          cleanId: true
+        })
       };
       fetch('/save.php', {
         method: 'POST',
