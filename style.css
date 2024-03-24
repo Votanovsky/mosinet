@@ -77,12 +77,14 @@ li {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
 .rates_wr .rates_tabs-name .all {
   font-family: "Furore";
   font-size: 44px;
   height: 72px;
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +129,7 @@ li {
 }
 .rates_wr .rates_tabs-name .provs {
   display: flex;
-  width: 70%;
+  width: 100%;
   height: 72px;
 }
 @media (max-width: 1200px) {
@@ -167,11 +169,27 @@ li {
   transition: 0.4s;
 }
 .rates_wr .rates_tabs-name .provs .it--rol--active {
-  background: #5d00ff;
+  background: #FF4F12;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it--rol--active img {
+  filter: brightness(0) invert(1);
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it--meg--active {
+  background: #731982;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it--meg--active img {
+  filter: brightness(0) invert(1);
   transition: 0.4s;
 }
 .rates_wr .rates_tabs-name .provs .it--bel--active {
   background: #FEC901;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it--bel--active img {
+  filter: brightness(0) invert(1);
   transition: 0.4s;
 }
 @media (max-width: 1200px) {
@@ -192,9 +210,6 @@ li {
   filter: brightness(0) invert(1);
   transition: 0.4s;
 }
-.rates_wr .rates_tabs-name .provs .it:nth-child(3) {
-  margin-right: 0;
-}
 @media (max-width: 1200px) {
   .rates_wr .rates_tabs-name .provs .it:nth-child(3) img {
     width: 60%;
@@ -206,7 +221,35 @@ li {
   }
 }
 .rates_wr .rates_tabs-name .provs .it:nth-child(3):hover {
-  background: #5d00ff;
+  background: #FF4F12;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(3):hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(4) {
+  margin-right: 0;
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(4) img {
+  width: 80%;
+}
+@media (max-width: 1200px) {
+  .rates_wr .rates_tabs-name .provs .it:nth-child(4) img {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .rates_wr .rates_tabs-name .provs .it:nth-child(4) img {
+    width: 80%;
+  }
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(4):hover {
+  background: #731982;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(4):hover img {
+  filter: brightness(0) invert(1);
   transition: 0.4s;
 }
 .rates_wr .rates_tabs-name .provs .it:nth-child(2) {
@@ -224,6 +267,10 @@ li {
 }
 .rates_wr .rates_tabs-name .provs .it:nth-child(2):hover {
   background: #FEC901;
+  transition: 0.4s;
+}
+.rates_wr .rates_tabs-name .provs .it:nth-child(2):hover img {
+  filter: brightness(0) invert(1);
   transition: 0.4s;
 }
 .rates_wr .rates_tabs-name .provs .it img {
@@ -2463,7 +2510,7 @@ body {
   }
 }
 .section_advantages {
-  padding: 160px 30px 160px;
+  padding: 160px 30px 0px;
   background: #8146d3;
   color: #fff;
   overflow: hidden;
@@ -2475,14 +2522,15 @@ body {
 }
 @media (max-width: 576px) {
   .section_advantages {
-    padding: 120px 15px 60px;
+    padding: 120px 15px 0px;
   }
 }
 .section_advantages .title_f {
   font-family: "Furore";
   font-size: 54px;
-  margin-bottom: 60px;
   width: 85%;
+  margin: 0 auto 60px;
+  text-align: center;
 }
 @media (max-width: 992px) {
   .section_advantages .title_f {
@@ -2500,36 +2548,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+@media (max-width: 992px) {
+  .section_advantages .advant_wr {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .section_advantages .advant_wr .it {
-  width: 28.3333333333%;
-  margin-right: 60px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-}
-.section_advantages .advant_wr .it:nth-child(3) {
-  margin-right: 0;
-}
-@media (max-width: 992px) {
-  .section_advantages .advant_wr .it {
-    width: 40%;
-    margin-right: 40px;
-  }
-  .section_advantages .advant_wr .it:nth-child(3) {
-    margin-right: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .section_advantages .advant_wr .it {
-    width: 100%;
-    margin-right: 0;
-    align-items: center;
-    text-align: center;
-  }
-  .section_advantages .advant_wr .it:nth-child(3) {
-    margin-right: 0;
-  }
+  align-items: center;
+  text-align: center;
 }
 .section_advantages .advant_wr .it svg {
   width: 80px;
@@ -2554,7 +2589,7 @@ body {
 }
 .section_advantages .advant_wr .it .descr {
   font-family: "Rubik-Regular";
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 576px) {
   .section_advantages .advant_wr .it .descr {
@@ -2710,4 +2745,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=style.css.map */
+}

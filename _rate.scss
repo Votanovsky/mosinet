@@ -40,11 +40,13 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
         .all {
             font-family: 'Furore';
             font-size: 44px;
             height: 72px;
-            width: 70%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,7 +87,7 @@
         }
         .provs {
             display: flex;
-            width: 70%;
+            width: 100%;
             height: 72px;
             @media  (max-width: $breakpoint-xl-min) {
                 width: 100%;
@@ -117,12 +119,28 @@
                     }
                 }
                 &--rol--active {
-                    background: #5d00ff;
+                    background: #FF4F12;
                     transition: .4s;
+                    img {
+                        filter: brightness(0) invert(1);
+                        transition: .4s;
+                    }
+                }
+                &--meg--active {
+                    background: #731982;
+                    transition: .4s;
+                    img {
+                        filter: brightness(0) invert(1);
+                        transition: .4s;
+                    }
                 }
                 &--bel--active {
                     background: #FEC901;
                     transition: .4s;
+                    img {
+                        filter: brightness(0) invert(1);
+                        transition: .4s;
+                    }
                 }
                 &:nth-child(1) {
                     img {
@@ -143,7 +161,6 @@
                     }
                 }
                 &:nth-child(3) {
-                    margin-right: 0;
                     img {
                         @media  (max-width: $breakpoint-xl-min) {
                             width: 60%;
@@ -153,8 +170,34 @@
                         }
                     }
                     &:hover {
-                        background: #5d00ff;
+                        background: #FF4F12;
                         transition: .4s;
+                        img {
+                            filter: brightness(0) invert(1);
+                            transition: .4s;
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    margin-right: 0;
+                    img {
+                        width: 80%;
+                    }
+                    img {
+                        @media  (max-width: $breakpoint-xl-min) {
+                            width: 60%;
+                        }
+                        @media  (max-width: $breakpoint-sm-min) {
+                            width: 80%;
+                        }
+                    }
+                    &:hover {
+                        background: #731982;
+                        transition: .4s;
+                        img {
+                            filter: brightness(0) invert(1);
+                            transition: .4s;
+                        }
                     }
                 }
                 &:nth-child(2) {
@@ -170,6 +213,10 @@
                     &:hover {
                         background: #FEC901;
                         transition: .4s;
+                        img {
+                            filter: brightness(0) invert(1);
+                            transition: .4s;
+                        }
                     }
                 }
                 img {
