@@ -88,6 +88,7 @@ if (isOpen) {
 
 var tweens = []
 var swiper, swiper_text
+var swiper_rates
 function loadPage() {
     try {
         barba.init({
@@ -201,6 +202,21 @@ function loadPage() {
             
             swiper.controller.control = swiper_text
             swiper_text.controller.control = swiper
+
+
+            swiper_rates = new Swiper('.section_four .rate_padding', {
+                slidesPerView: 'auto',
+                // spaceBetween: 15,
+                // breakpoints: {
+                //     768: {
+                //         slidesPerView: 'auto'
+                //     },
+                //     992: {
+                //         slidesPerView: 'auto',
+                //         // spaceBetween: 30
+                //     }
+                // }
+            });
 
 
             gsap.registerPlugin(ScrollTrigger);
